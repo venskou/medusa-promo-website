@@ -1,0 +1,23 @@
+.btn {
+  text-transform: uppercase;
+  font-family: $base__font-family;
+  display: inline-block;
+  vertical-align: top;
+  color: #371be1;
+  background-color: #fff;
+  font-size: rem(20);
+  line-height: 1;
+  font-weight: 500;
+  border: none;
+  padding: 0;
+  border-radius: 5px;
+  padding: 11px 17px;
+
+  &:hover {
+    color: #371be1;
+  }
+
+  &:focus {
+    color: #371be1;
+  }
+}

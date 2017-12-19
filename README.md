@@ -1,1 +1,1 @@
-medusa promo
+Medusa Project

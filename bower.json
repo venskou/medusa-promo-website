@@ -1,0 +1,16 @@
+{
+  "name": "medusa",
+  "authors": [
+    "Mediatec Software http://www.mediatec.org <hello@mediatec.com>"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules"
+  ],
+  "dependencies": {
+    "jquery": "3.2.1",
+    "jquery-mousewheel": "3.1.13",
+    "jquery.scrollTo": "latest",
+    "popper.js": "^1.12.9"
+  }
+}

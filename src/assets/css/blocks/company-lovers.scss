@@ -1,0 +1,31 @@
+.company-lovers {
+  background-color: #f6f6f9;
+  padding-top: 78px;
+  padding-bottom: 56px;
+}
+
+.company-lovers__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  width: 100%;
+  padding-left: 120px;
+  padding-right: 120px;
+}
+
+.company-lovers__title {
+  color: #000;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 76px;
+  h2 {
+    font-size: rem(18);
+    line-height: rem(31);
+    font-weight: 700;
+  }
+}

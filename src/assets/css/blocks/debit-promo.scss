@@ -1,0 +1,82 @@
+@keyframes smallscale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.03);
+  }
+}
+
+.debit-promo {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.debit-promo__title {
+  margin: 0 auto;
+  text-align: center;
+  width: 46.4%;
+  margin-bottom: 20px;
+
+  h2 {
+    color: #000;
+    font-weight: 700;
+    font-size: rem(36);
+    line-height: rem(50);
+  }
+}
+
+.debit-promo__descr {
+  text-align: center;
+  width: 62%;
+  margin: 0 auto;
+  margin-bottom: 39px;
+  position: relative;
+  z-index: 3;
+
+  p {
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: rem(31);
+  }
+}
+
+.debit-promo__partners {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.debit-promo__partner {
+
+  &:first-child {
+    margin-left: auto;
+  }
+
+  &:last-child {
+    margin-right: auto;
+  }
+}
+
+.debit-promo__card-wrap {
+  width: 100%;
+}
+
+.debit-promo__card {
+  margin: 0 auto;
+  width: 540px;
+  height: 432px;
+  background-size: 540px 432px;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/img/card@1x.jpg);
+  animation-name: smallscale;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url(../../assets/img/card@2x.jpg);
+  }
+}

@@ -1,0 +1,163 @@
+.page-header {
+  background-color: #371be1;
+  color: #fff;
+  padding-top: 200px;
+  padding-bottom: 142px;
+  overflow: hidden;
+}
+
+.page-header__title {
+  margin-top: 36px;
+  margin-bottom: 38px;
+
+  h1 {
+    font-weight: 700;
+    font-size: rem(45);
+    line-height: rem(60);
+    letter-spacing: 0.4px;
+    margin-bottom: 0;
+  }
+}
+
+.page-header__promo-descr {
+  margin-bottom: 51px;
+  p {
+    margin-bottom: 0;
+    opacity: 0.5;
+    font-size: rem(27);
+    line-height: rem(39);
+  }
+}
+
+.page-header__started-link {
+  margin-bottom: 120px;
+}
+
+.page-header__mobile-apps {
+  p {
+    opacity: 0.5;
+    font-size: rem(18);
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 28px;
+  }
+}
+
+.page-header__mobile-store {
+  font-size: 0;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 12px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--google-play {
+    img {
+      width: 139px;
+      height: 41px;
+    }
+  }
+
+  &--app-store {
+    img {
+      width: 117px;
+      height: 41px;
+    }
+  }
+}
+
+.page-header__stats {
+  position: relative;
+  height: calc(100% + 142px);
+  box-sizing: content-box;
+}
+
+.page-header__stats-item {
+  display: block;
+  width: 100px;
+  background-color: rgba(#8f7fee, 0.11);
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  padding-top: 22px;
+  top: 100%;
+
+  &--btg {
+    // top: 77.2%;
+    left: 1.7%;
+    z-index: 1;
+  }
+
+  &--emc2 {
+    z-index: 2;
+    left: 11.5%;
+    // top: 68.5%;
+  }
+
+  &--powr {
+    z-index: 3;
+    left: 20.6%;
+    // top: 35.6%;
+  }
+
+  &--iota {
+    z-index: 4;
+    left: 32.3%;
+    // top: 46.1%;
+  }
+
+  &--xmr {
+    z-index: 5;
+    left: 39.1%;
+    // top: 55.6%;
+  }
+
+  &--eos {
+    z-index: 6;
+    left: 57.8%;
+    // top: 0.7%;
+  }
+
+  &--neo {
+    z-index: 7;
+    left: 63.9%;
+    // top: 40%;
+  }
+
+  &--nxt {
+    z-index: 8;
+    left: 75.5%;
+    // top: 68.6%;
+  }
+
+  &--xpr {
+    z-index: 9;
+    left: 81.9%;
+    // top: 9.7%;
+  }
+}
+
+.page-header__stats-item-name {
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  opacity: 0.2;
+  margin-bottom: 5px;
+}
+
+.page-header__stats-item-percents {
+  display: block;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  opacity: 0.2;
+}
+
