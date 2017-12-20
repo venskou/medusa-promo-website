@@ -149,9 +149,23 @@
                 url(../../assets/img/top-logo-inverted@1x.png);
 
                 @media (min-resolution: 1.5dppx) {
-                        background-image: url(../../assets/img/top-logo@2x.png),
-                        url(../../assets/img/top-logo-inverted@2x.png);
+                    background-image: url(../../assets/img/top-logo@2x.png),
+                    url(../../assets/img/top-logo-inverted@2x.png);
                 }
+
+                @media (max-width: $xs-max-width) {
+                    background-image: url(../../assets/img/logo-symbol@1x.png);
+                    width: 52px;
+                    height: 52px;
+                    background-size: 52px 52px;
+                    background-repeat: no-repeat;
+
+                    @media (min-resolution: 1.5dppx) {
+                        background-image: url(../../assets/img/logo-symbol@2x.png);
+                    }
+                }
+
+
             }
         }
 
@@ -662,7 +676,7 @@
 
         &__popup {
             position: absolute;
-            top: 0px;
+            top: -4px;
             display: flex;
             justify-content: flex-center;
             pointer-events: none;

@@ -64,19 +64,36 @@
 }
 
 .debit-promo__card {
+  position: relative;
   margin: 0 auto;
-  width: 540px;
-  height: 432px;
-  background-size: 540px 432px;
+  width: 585px;
+  height: 415px;
+  background-size: 585px 415px;
   background-repeat: no-repeat;
-  background-image: url(../../assets/img/card@1x.jpg);
+  background-image: url(../../assets/img/card_form@1x.png);
+  overflow: hidden;
+
+  @media (min-resolution: 1.5dppx) {
+    background-image: url(../../assets/img/card_form@2x.png);
+  }
+}
+
+.debit-promo__card-bg {
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
   animation-name: smallscale;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: linear;
-
+  background-image: url(../../assets/img/card_form_bg@1x.jpg);
+  z-index: -1;
   @media (min-resolution: 1.5dppx) {
-    background-image: url(../../assets/img/card@2x.jpg);
+    background-image: url(../../assets/img/card_form@2x.jpg);
   }
 }
