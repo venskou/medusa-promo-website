@@ -311,14 +311,8 @@ function startAnimation() {
 $(document).ready(function() {
     startAnimation();
 
-    $('.page-header__started-link').on('click', function() {
-        $('.page-blackout').addClass('page-blackout--show');
-        $('.start-popup').addClass('start-popup--show');
-    });
-
-    $('.start_popup__close-btn').on('click', function() {
-        $('.page-blackout').removeClass('page-blackout--show');
-        $('.start-popup').removeClass('start-popup--show');
-    });
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('click')
+  })
 });
 

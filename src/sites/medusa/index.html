@@ -34,7 +34,7 @@
                         <div class="page-header__promo-descr">
                             <p>Medusa Coin makes it possible with just your debit card.</p>
                         </div>
-                        <a href="#" class="page-header__started-link btn">Get started with medusa coins</a>
+                        <a href="#" class="page-header__started-link btn" data-toggle="modal" data-target="#start-modal">Get started with medusa coins</a>
                         <div class="page-header__mobile-apps">
                             <p>Check out our mobile applications on the next stores</p>
                             <div class="page-header__mobile-stores">
@@ -431,9 +431,20 @@
             </div>
         </div>
     </footer>
-    <div class="page-blackout"></div>
-    <div class="start-popup">
-        <button class="start_popup__close-btn" type="button">Close popup</button>
+    <div class="start-popup modal fade" id="start-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Some content will be here
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
