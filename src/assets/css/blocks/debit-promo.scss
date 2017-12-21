@@ -9,26 +9,26 @@
 
 .debit-promo {
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 
   @media(max-width: $xl-max-width) {
     padding-top: 80px;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
   }
 
   @media(max-width: $md-max-width) {
     padding-top: 70px;
-    padding-bottom: 70px;
+    padding-bottom: 40px;
   }
 
   @media(max-width: $sm-max-width) {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
   }
 
   @media(max-width: $xs-max-width) {
     padding-top: 50px;
-    padding-bottom: 40px;
+    padding-bottom: 20px;
   }
 
 }
@@ -159,6 +159,7 @@
 
 .debit-promo__card {
   position: relative;
+  left: 32px;
   margin: 0 auto;
   width: 585px;
   height: 415px;
@@ -177,10 +178,11 @@
     background-size: 556px 386px;
   }
 
-  @media(max-width: $xs-max-width) {
+  @media(max-width: 575px) {
     width: 320px;
     height: 220px;
     background-size: 320px 220px;
+    left: 8px;
   }
 }
 
@@ -204,10 +206,11 @@
     background-image: url(../../assets/img/card_form@2x.jpg);
   }
 
-  @media(max-width: $xs-max-width) {
-    width: 320px;
+  @media(max-width: 575px) {
+    width: 290px;
     top: 5px;
     height: 220px;
+    right: 15px;
     // background-size: 320px 220px;
   }
 }

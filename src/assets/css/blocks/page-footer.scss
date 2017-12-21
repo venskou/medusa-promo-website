@@ -9,14 +9,18 @@
   border-bottom: 1px solid #cdcdcd;
 }
 
+.page-footer__nav {
+  margin-bottom: 25px;
+}
+
 .page-footer__nav-title {
   font-weight: 700;
   font-size: rem(14);
   line-height: 1;
   margin-bottom: 22px;
 
-  @media(max-width: $xs-max-width) {
-    margin-bottom: 15px;
+  @media(max-width: 575px) {
+    margin-bottom: 10px;
   }
 }
 
@@ -50,10 +54,10 @@
   color: #000;
   border: 1px solid #e5e8ed;
   border-radius: 3px;
-  padding-left: 5px;
+  padding-left: 10px;
   width: 60%;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 
   @media(max-width: $xs-max-width) {
     width: calc(100% - 120px);
@@ -68,8 +72,8 @@
   border: none;
   line-height: 1;
   outline: none;
-  padding-top: 6px;
-  padding-bottom: 6px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   padding-left: 10px;
   padding-right: 10px;
   &:focus {
@@ -93,6 +97,68 @@
   font-size: 0;
 }
 
+.page-footer__social-icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0.8;
+  transition: opacity 0.25s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &--fb {
+    background-image: url(../../assets/img/fb@1x.jpg);
+    background-size: 20px 20px;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url(../../assets/img/fb@2x.jpg);
+    }
+  }
+
+  &--tw {
+    background-image: url(../../assets/img/tw@1x.jpg);
+    background-size: 22px 20px;
+    background-position: center 4px;
+    @media (min-resolution: 1.5dppx) {
+      background-image: url(../../assets/img/tw@2x.jpg);
+    }
+  }
+
+  &--btc {
+    background-image: url(../../assets/img/btc@1x.jpg);
+    background-size: 20px 20px;
+    background-position: center 5px;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url(../../assets/img/btc@2x.jpg);
+    }
+  }
+
+  &--rd {
+    background-image: url(../../assets/img/reddit@1x.jpg);
+    background-size: 20px 20px;
+    background-position: center 5px;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url(../../assets/img/reddit@2x.jpg);
+    }
+  }
+
+  &--sl {
+    background-image: url(../../assets/img/slack@1x.jpg);
+    background-size: 20px 20px;
+    background-position: center 4px;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url(../../assets/img/slack@2x.jpg);
+    }
+  }
+}
+
 .page-footer__bottom-panel {
   padding-top: 34px;
   padding-bottom: 34px;
@@ -114,7 +180,7 @@
 .page-footer__bottom-item {
   display: inline-block;
   vertical-align: top;
-  margin-top: 9px;
+  margin-top: 11px;
   margin-right: 16px;
 
   @media(max-width: 575px) {
@@ -136,6 +202,8 @@
   display: inline-block;
   vertical-align: top;
   margin-right: 28px;
+  // box-sizing: content-box;
+  margin-bottom: 12px;
 
   span {
     display: inline-block;
@@ -156,6 +224,10 @@
   text-align: right;
   margin-bottom: 5px;
   font-weight: 700;
+
+  @media(max-width: $sm-max-width) {
+    text-align: left;
+  }
 
   @media(max-width: 575px) {
     text-align: left;

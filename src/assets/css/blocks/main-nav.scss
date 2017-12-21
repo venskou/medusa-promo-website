@@ -48,6 +48,7 @@
             z-index: 1000;
             background-color: $white;
             transition: background-color 0.3s;
+            box-shadow: 0px 0px 50px -20px rgba(0,0,0,.8);
 
             .mdtc__nav-logo__promo {
                 display: none;
@@ -57,10 +58,12 @@
                 padding-bottom: 0;
 
                 span {
-                    background-image: url(../../assets/img/top-logo-inverted@1x.png);
+                    @media(min-width: $md-min-width) {
+                        background-image: url(../../assets/img/top-logo-inverted@1x.png);
 
-                    @media (min-resolution: 1.5dppx) {
-                        background-image: url(../../assets/img/top-logo-inverted@2x.png);
+                        @media (min-resolution: 1.5dppx) {
+                            background-image: url(../../assets/img/top-logo-inverted@2x.png);
+                        }
                     }
                 }
             }
@@ -105,7 +108,7 @@
                 margin-top: 30px;
                 position: absolute;
                 background-color: transparent;
-
+                box-shadow: none;
                 .mdtc__nav-logo__promo {
                     display: block;
                 }

@@ -1,0 +1,15 @@
+.start-popup {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -100;
+  background-color: #fff;
+  border-radius: 5px;
+
+  &--show {
+    z-index: 1500;
+  }
+}

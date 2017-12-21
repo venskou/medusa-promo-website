@@ -108,6 +108,9 @@
   @media(max-width: $xs-max-width) {
     font-size: rem(15);
     margin-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
   }
 }
 
@@ -139,7 +142,11 @@
   font-size: 0;
   display: inline-block;
   vertical-align: top;
-  margin-right: 12px;
+  margin-right: 18px;
+
+  @media(max-width: $xs-max-width) {
+    margin-right: 12px;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -260,11 +267,19 @@
   &--nxt {
     z-index: 8;
     left: 75.5%;
+
+    @media(max-width: $xs-max-width) {
+      left: 71.5%;
+    }
   }
 
   &--xpr {
     z-index: 9;
     left: 81.9%;
+
+    @media(max-width: $xs-max-width) {
+      left: 75.1%;
+    }
   }
 }
 

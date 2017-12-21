@@ -35,7 +35,7 @@
     display: block;
     width: 87px;
     height: 79px;
-    top: 47px;
+    top: 56px;
     left: -60px;
     background-repeat: no-repeat;
     background-size: 87px 79px;
@@ -48,7 +48,7 @@
       left: 23px;
       width: 74px;
       height: 66px;
-      top: 47px;
+      top: 55px;
       background-repeat: no-repeat;
       background-size: 74px 66px;
     }
@@ -70,7 +70,7 @@
 }
 
 .feedback__text {
-  padding-top: 40px;
+  padding-top: 50px;
   margin-bottom: 35px;
   p {
     font-size: rem(18);
@@ -117,7 +117,7 @@
       background-image: url(../../assets/img/daily-graph@@2x.png);
     }
   }
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 
   @media(max-width: $md-max-width) {
     padding-bottom: 30px;

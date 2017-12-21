@@ -1,7 +1,7 @@
 .features {
   padding-top: 149px;
   color: #000;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
 
   @media(max-width: $xl-max-width) {
     padding-top: 110px;
@@ -14,7 +14,7 @@
 
   @media(max-width: 575px) {
     padding-top: 50px;
-    padding-bottom: 60px;
+    padding-bottom: 50px;
   }
 }
 
@@ -37,6 +37,9 @@
 
   @media(max-width: 575px) {
     margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &--first {
@@ -65,8 +68,8 @@
 
       @media(max-width: 575px) {
         left: 10px;
-        top: 50px;
-        background-size: 196px 298px;
+        top: 70px;
+        background-size: 158px 209px;
       }
     }
   }
@@ -95,12 +98,14 @@
 
       @media(max-width: 575px) {
         right: 0px;
-        background-size: 107px 278px;
+        background-size: 107px 201px;
       }
     }
   }
 
   &--third {
+    margin-bottom: 150px;
+
     &::before {
       background-image: url(../../assets/img/third_feature_symbol@1x.jpg);
       top: 27px;
@@ -111,8 +116,6 @@
       @media (min-resolution: 1.5dppx) {
         background-image: url(../../assets/img/third_feature_symbol@2x.jpg);
       }
-
-
 
       @media(max-width: $md-max-width) {
         top: 35px;
@@ -125,9 +128,14 @@
       }
 
       @media(max-width: 575px) {
+        top: 60px;
         left: 10px;
-        background-size: 332px 287px;
+        background-size: 267px 222px;
       }
+    }
+
+    @media (max-width: 575px) {
+      margin-bottom: 40px;
     }
   }
 
@@ -155,7 +163,7 @@
 
       @media(max-width: 575px) {
         right: 0px;
-        background-size: 107px 278px;
+        background-size: 107px 201px;
       }
     }
   }
@@ -224,6 +232,23 @@
       @media (max-width: $sm-max-width) {
         font-size: rem(130);
         margin-top: -9px;
+      }
+    }
+  }
+
+  &--fourth {
+    span {
+      margin-top: -33px;
+      padding-left: 0px;
+
+      @media (max-width: $md-max-width) {
+        margin-top: -18px;
+        font-size: rem(160);
+      }
+
+      @media (max-width: $sm-max-width) {
+        font-size: rem(130);
+        margin-top: -2px;
       }
     }
   }
