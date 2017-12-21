@@ -434,14 +434,41 @@
     <div class="start-popup modal fade" id="start-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
+                <div id="loader-backdrop" class="start-popup__backdrop" style="display: none;">
+                    <div class="start-popup__loader"></div>
+                </div>
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Send request</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <span class="start-popup__close-btn" aria-hidden="true"></span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    Some content will be here
+                    <div class="start-popup__text">
+                        <p>
+                            The medusa Coins stack helps us plan? communicate and collaborate, so that we can focus to more on what we do best: creatind great special effects software.
+                        </p>
+                    </div>
+                    <form action="#" class="start-popup__form">
+                        <div class="start-popup__account-type">
+                            <span class="start-popup__type-label">Account type</span>
+                            <div class="start-popup__account-choose">
+                                <input type="radio" id="personal-account" class="start-popup__account-radio" name="account">
+                                <label class="start-popup__account-label" for="personal-account">Personal</label>
+                                <input type="radio" id="company-account" class="start-popup__account-radio" name="account" checked>
+                                <label class="start-popup__account-label" for="company-account">Company</label>
+                            </div>
+                        </div>
+                        <div class="start-popup__email">
+                            <label class="start-popup__email-label" for="popup-email">Email</label>
+                            <input type="email" class="start-popup__email-input" id="popup-email">
+                            <span class="start-popup__email-warning">Please enter valid email</span>
+                        </div>
+                        <div class="start-popup__submit">
+                            <button class="start-popup__submit-btn btn btn--blue">Send me magic link</button>
+                            <span class="start-popup__submit-success">Request was successfully sent</span>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

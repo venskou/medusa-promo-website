@@ -37,6 +37,11 @@
 
   @media(max-width: 575px) {
     margin-bottom: 40px;
+
+    &::before {
+      display: none;
+    }
+
     &:last-child {
       margin-bottom: 0;
     }
