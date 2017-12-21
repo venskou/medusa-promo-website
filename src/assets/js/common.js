@@ -281,7 +281,7 @@ function startAnimation() {
             top: columnCssTop,
             tween: column.percents
         }, {
-            easing: 'easeInSine',
+            easing: 'ease-in-out',
             duration: columnDuration,
             progress: function(elements, complete, remaining, start, tweenValue) {
                 var percents = $(columnElem + ' .page-header__stats-item-percents')

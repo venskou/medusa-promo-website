@@ -25,10 +25,11 @@
 .btn--blue {
   color: #fff;
   background-color: #371be1;
-  padding: 16px 25px 13px 23px;
+  // padding: 16px 25px 13px 23px;
 
   &:hover {
     color: #fff;
+    background-color: lighten(#371be1, 4%);
   }
 
   &:focus {
