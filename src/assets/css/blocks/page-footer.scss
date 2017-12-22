@@ -1,43 +1,39 @@
-.page-footer {
+.pageFooter {
   background: #f7f6fb;
 
   &__wrapper {
-    padding-top: 48px;
-    padding-bottom: 24px;
+    padding-top: rem(48);
+    padding-bottom: rem(24);
     border-bottom: 1px solid #e6e6e6;
   }
 
   &__nav {
-    margin-bottom: 25px;
+    margin-bottom: rem(25);
   }
 
-  &__nav-title {
+  &__navTitle {
     font-weight: 500;
     font-size: rem(14);
     line-height: 1;
-    margin-bottom: 22px;
+    margin-bottom: rem(22);
 
     @media(max-width: 575px) {
-      margin-bottom: 10px;
+      margin-bottom: rem(10);
     }
   }
 
-  &__nav-list {
+  &__navList {
     margin: 0;
     padding: 0;
     list-style: none;
 
     @media(max-width: $xs-max-width) {
-      margin-bottom: 30px;
+      margin-bottom: rem(30);
     }
   }
 
-  &__nav-item {
-    margin-bottom: 10px;
-  }
-
-  .page-footer__nav-link {
-
+  &__navItem {
+    margin-bottom: rem(10);
   }
 
   &__description {
@@ -47,7 +43,7 @@
   }
 
   &__form {
-    margin-bottom: 15px;
+    margin-bottom: rem(15);
   }
 
   &__input {
@@ -76,95 +72,18 @@
     padding-bottom: 9px;
     padding-left: 10px;
     padding-right: 10px;
+
     &:focus {
       outline: none;
     }
   }
 
-  &__social-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+  &__bottomPanel {
+    padding-top: rem(34);
+    padding-bottom: rem(34);
   }
 
-  &__social-item {
-    display: inline-block;
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-
-  &__social-link {
-    font-size: 0;
-  }
-
-  &__social-icon {
-    display: block;
-    width: 25px;
-    height: 25px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    opacity: 0.8;
-    transition: opacity 0.25s ease;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    &--fb {
-      background-image: url(../../assets/img/fb@1x.jpg);
-      background-size: 20px 20px;
-
-      @media (min-resolution: 1.5dppx) {
-        background-image: url(../../assets/img/fb@2x.jpg);
-      }
-    }
-
-    &--tw {
-      background-image: url(../../assets/img/tw@1x.jpg);
-      background-size: 22px 20px;
-      background-position: center 4px;
-      @media (min-resolution: 1.5dppx) {
-        background-image: url(../../assets/img/tw@2x.jpg);
-      }
-    }
-
-    &--btc {
-      background-image: url(../../assets/img/btc@1x.jpg);
-      background-size: 20px 20px;
-      background-position: center 5px;
-
-      @media (min-resolution: 1.5dppx) {
-        background-image: url(../../assets/img/btc@2x.jpg);
-      }
-    }
-
-    &--rd {
-      background-image: url(../../assets/img/reddit@1x.jpg);
-      background-size: 20px 20px;
-      background-position: center 5px;
-
-      @media (min-resolution: 1.5dppx) {
-        background-image: url(../../assets/img/reddit@2x.jpg);
-      }
-    }
-
-    &--sl {
-      background-image: url(../../assets/img/slack@1x.jpg);
-      background-size: 20px 20px;
-      background-position: center 4px;
-
-      @media (min-resolution: 1.5dppx) {
-        background-image: url(../../assets/img/slack@2x.jpg);
-      }
-    }
-  }
-
-  &__bottom-panel {
-    padding-top: 34px;
-    padding-bottom: 34px;
-  }
-
-  &__nav-bottom {
+  &__navBottom {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -173,23 +92,23 @@
 
     @media(max-width: 575px) {
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: rem(10);
     }
   }
 
-  &__bottom-item {
+  &__bottomItem {
     display: inline-block;
     vertical-align: top;
-    margin-top: 11px;
-    margin-right: 16px;
+    margin-top: rem(11);
+    margin-right: rem(16);
 
     @media(max-width: 575px) {
       display: block;
-      margin-bottom: 7px;
+      margin-bottom: rem(7);
     }
   }
 
-  &__bottom-link {
+  &__bottomLink {
     color: #000;
     font-weight: 500;
   }
@@ -201,9 +120,8 @@
     height: 33px;
     display: inline-block;
     vertical-align: top;
-    margin-right: 28px;
-    // box-sizing: content-box;
-    margin-bottom: 12px;
+    margin-right: rem(28);
+    margin-bottom: rem(12);
 
     span {
       display: inline-block;

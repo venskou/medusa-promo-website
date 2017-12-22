@@ -7,34 +7,34 @@
   }
 }
 
-.debit-promo {
-  padding-top: 100px;
-  padding-bottom: 60px;
+.debitPromo {
+  padding-top: rem(100);
+  padding-bottom:rem( 60);
   overflow-x: hidden;
 
   @media(max-width: $xl-max-width) {
-    padding-top: 80px;
-    padding-bottom: 50px;
+    padding-top:rem( 80);
+    padding-bottom:rem( 50);
   }
 
   @media(max-width: $md-max-width) {
-    padding-top: 70px;
-    padding-bottom: 40px;
+    padding-top:rem( 70);
+    padding-bottom:rem( 40);
   }
 
   @media(max-width: $sm-max-width) {
-    padding-top: 60px;
-    padding-bottom: 40px;
+    padding-top:rem( 60);
+    padding-bottom:rem( 40);
   }
 
   @media(max-width: $xs-max-width) {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    padding-top:rem( 50);
+    padding-bottom:rem( 20);
   }
 
 
   &__title {
-    margin: 0 auto 20px;
+    margin: 0 auto rem(20);
     text-align: center;
     width: 46.4%;
 
@@ -70,9 +70,9 @@
 
     @media(max-width: $xs-max-width) {
       width: 100%;
-      padding-left: 20px;
-      padding-right: 20px;
-      margin-bottom: 10px;
+      padding-left: rem(20);
+      padding-right: rem(20);
+      margin-bottom: rem(10);
     }
   }
 
@@ -80,7 +80,7 @@
     text-align: center;
     width: 62%;
     margin: 0 auto;
-    margin-bottom: 39px;
+    margin-bottom: rem(39);
     position: relative;
     z-index: 3;
 
@@ -106,19 +106,19 @@
 
     @media(max-width: $xl-max-width) {
       width: 67%;
-      margin-bottom: 30px;
+      margin-bottom: rem(30);
     }
 
     @media(max-width: $md-max-width) {
       width: 70%;
-      margin-bottom: 20px;
+      margin-bottom: rem(20);
     }
 
     @media(max-width: $sm-max-width) {
       width: 85%;
-      margin-bottom: 20px;
-      padding-left: 20px;
-      padding-right: 20px;
+      margin-bottom: rem(20);
+      padding-left: rem(20);
+      padding-right: rem(20);
     }
 
     @media(max-width: $xs-max-width) {
@@ -131,14 +131,14 @@
     flex-direction: row;
     flex-wrap: nowrap;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: rem(20);
   }
 
   &__partner {
 
     &:first-child {
       margin-left: auto;
-      margin-right: 30px;
+      margin-right: rem(30);
     }
 
     &:last-child {
@@ -146,7 +146,7 @@
     }
   }
 
-  &__card-wrap {
+  &__cardWrap {
     width: 100%;
   }
 
@@ -179,7 +179,7 @@
     }
   }
 
-  &__card-bg {
+  &__cardBg {
     background-size: cover;
     background-position: center center;
     position: absolute;
@@ -204,7 +204,6 @@
       top: 5px;
       height: 220px;
       right: 15px;
-      // background-size: 320px 220px;
     }
   }
 

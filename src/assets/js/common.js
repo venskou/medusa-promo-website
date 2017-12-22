@@ -268,7 +268,7 @@ function startAnimation() {
     }
 
     columns.forEach(function(column) {
-        var columnElem = '.page-header__stats-item--' + column.name;
+        var columnElem = '.pageHeader__statsItem--' + column.name;
         var columnCssTop = 100 - column.height + '%'
         var columnDuration = (column.height / 0.1) * one_tenth_time;
         var columnTextOpacity = ((1 / maxColumnPercents) * column.percents).toFixed(1) + '';
@@ -282,13 +282,13 @@ function startAnimation() {
             easing: 'ease-in-out',
             duration: columnDuration,
             progress: function(elements, complete, remaining, start, tweenValue) {
-                var percents = $(columnElem + ' .page-header__stats-item-percents')
+                var percents = $(columnElem + ' .pageHeader__statsItemPercents')
                 .text('+' + Math.round(tweenValue) + '%');
                 return percents;
             }
         });
 
-        $(columnElem + ' .page-header__stats-item-name').velocity({
+        $(columnElem + ' .pageHeader__statsItemName').velocity({
             opacity: columnTextOpacity
         }, {
             easing: 'easeInSine',
@@ -296,7 +296,7 @@ function startAnimation() {
             queue: false,
         });
 
-        $(columnElem + ' .page-header__stats-item-percents').velocity({
+        $(columnElem + ' .pageHeader__statsItemPercents').velocity({
             opacity: columnTextOpacity
         }, {
             easing: 'easeInSine',

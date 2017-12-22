@@ -30,8 +30,8 @@
   }
 
   &__item {
-    padding-left: 50px;
-    padding-right: 70px;
+    padding-left: rem(50);
+    padding-right: rem(70);
     position: relative;
 
     &::before {
@@ -45,6 +45,7 @@
       background-repeat: no-repeat;
       background-size: 87px 79px;
       background-image: url(../../assets/img/quotes__icon@1x.png);
+
       @media (min-resolution: 1.5dppx) {
         background-image: url(../../assets/img/quotes__icon@2x.png);
       }
@@ -53,7 +54,7 @@
         left: 23px;
         width: 74px;
         height: 66px;
-        top: 55px;
+        top: 46px;
         background-repeat: no-repeat;
         background-size: 74px 66px;
       }
@@ -64,8 +65,8 @@
     }
 
     @media(max-width: $md-max-width) {
-      padding-left: 140px;
-      padding-right: 40px;
+      padding-left: rem(140);
+      padding-right: rem(40);
     }
 
     @media(max-width: $xs-max-width) {
@@ -75,15 +76,15 @@
   }
 
   &__text {
-    padding-top: 50px;
-    margin-bottom: 35px;
+    padding-top: rem(50);
+    margin-bottom: rem(35);
     p {
       font-size: rem(18);
       line-height: rem(30);
     }
 
     @media (max-width: $md-max-width) {
-      margin-bottom: 10px;
+      margin-bottom: rem(10);
 
       p {
         font-size: rem(14);
@@ -97,7 +98,7 @@
   }
 
   &__author {
-    margin-bottom: 30px;
+    margin-bottom: rem(30);
 
     span {
       font-weight: 700;
@@ -106,11 +107,11 @@
     }
 
     @media (max-width: $md-max-width) {
-      margin-bottom: 10px;
+      margin-bottom: rem(10);
     }
   }
 
-  &__author-logo {
+  &__authorLogo {
     span {
       display: inline-block;
       width: 122px;
@@ -122,10 +123,11 @@
         background-image: url(../../assets/img/daily-graph@2x.png);
       }
     }
-    padding-bottom: 50px;
+
+    padding-bottom: rem(50);
 
     @media(max-width: $md-max-width) {
-      padding-bottom: 30px;
+      padding-bottom: rem(30);
     }
   }
 

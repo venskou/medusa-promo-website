@@ -1,31 +1,31 @@
-.page-header {
+.pageHeader {
   background-color: #371be1;
   color: #fff;
-  padding-top: 200px;
-  padding-bottom: 142px;
+  padding-top: rem(200);
+  padding-bottom: rem(142);
   overflow: hidden;
 
   @media (max-width: $xl-max-width) {
-    padding-top: 160px;
-    padding-bottom: 100px;
+    padding-top: rem(160);
+    padding-bottom: rem(100);
   }
 
   @media (max-width: $md-max-width) {
-    padding-top: 140px;
+    padding-top: rem(140);
     padding-bottom: 420px;
   }
 
   @media(max-width: $sm-max-width) {
-    padding-top: 120px;
+    padding-top: rem(120);
   }
 
   @media(max-width: $xs-max-width) {
-    padding-top: 90px;
+    padding-top: rem(90);
   }
 
   &__title {
-    margin-top: 36px;
-    margin-bottom: 38px;
+    margin-top: rem(36);
+    margin-bottom: rem(38);
 
     h1 {
       font-weight: 700;
@@ -56,20 +56,20 @@
     }
 
     @media(max-width: $xl-max-width) {
-      margin-bottom: 30px;
+      margin-bottom: rem(30);
     }
 
     @media(max-width: $md-max-width) {
-      margin-bottom: 25px;
+      margin-bottom: rem(25);
     }
 
     @media(max-width: $xs-max-width) {
-      margin-top: 66px;
+      margin-top: rem(66);
     }
   }
 
-  &__promo-descr {
-    margin-bottom: 51px;
+  &__promoDescr {
+    margin-bottom: rem(51);
     p {
       margin-bottom: 0;
       opacity: 0.5;
@@ -83,24 +83,24 @@
     }
 
     @media(max-width: $xl-max-width) {
-      margin-bottom: 50px;
+      margin-bottom: rem(50);
     }
 
     @media(max-width: $sm-max-width) {
-      margin-bottom: 40px;
+      margin-bottom: rem(40);
     }
   }
 
-  &__started-link {
-    margin-bottom: 120px;
+  &__startedLink {
+    margin-bottom: rem(120);
 
     @media(max-width: $xl-max-width) {
       font-size: rem(17);
-      margin-bottom: 50px;
+      margin-bottom: rem(50);
     }
 
     @media(max-width: $md-max-width) {
-      margin-bottom: 40px;
+      margin-bottom: rem(40);
       font-size: rem(20);
     }
 
@@ -110,22 +110,22 @@
 
     @media(max-width: $xs-max-width) {
       font-size: rem(15);
-      margin-bottom: 40px;
-      padding-left: 15px;
-      padding-right: 15px;
+      margin-bottom: rem(40);
+      padding-left: rem(15);
+      padding-right: rem(15);
       width: 100%;
     }
   }
 
-  &__mobile-apps {
+  &__mobileApps {
     p {
-      margin-bottom: 28px;
+      margin-bottom: rem(28);
       opacity: 0.5;
       font-size: rem(18);
       line-height: rem(26);
 
       @media(max-width: $xl-max-width) {
-        margin-bottom: 21px;
+        margin-bottom: rem(21);
       }
 
       @media(max-width: $md-max-width) {
@@ -140,28 +140,28 @@
     }
   }
 
-  &__mobile-store {
+  &__mobileStore {
     font-size: 0;
     display: inline-block;
     vertical-align: top;
-    margin-right: 18px;
+    margin-right: rem(18);
 
     @media(max-width: $xs-max-width) {
-      margin-right: 12px;
+      margin-right: rem(12);
     }
 
     &:last-child {
       margin-right: 0;
     }
 
-    &--google-play {
+    &--googlePlay {
       img {
         width: 139px;
         height: 41px;
       }
     }
 
-    &--app-store {
+    &--appStore {
       img {
         width: 117px;
         height: 41px;
@@ -179,12 +179,12 @@
     }
 
     @media(max-width: $md-max-width) {
-      margin-top: 30px;
+      margin-top: rem(30);
       height: calc(100% + 420px);
     }
   }
 
-  &__stats-title {
+  &__statsTitle {
     text-transform: uppercase;
     font-weight: 700;
     font-size: rem(18);
@@ -205,14 +205,14 @@
     }
   }
 
-  &__stats-item {
+  &__statsItem {
     display: block;
     width: 100px;
     background-color: rgba(#8f7fee, 0.11);
     position: absolute;
     bottom: 0;
     overflow: hidden;
-    padding-top: 22px;
+    padding-top: rem(22);
     top: 100%;
     text-align: center;
 
@@ -286,7 +286,7 @@
     }
   }
 
-  &__stats-item-name {
+  &__statsItemName {
     display: block;
     text-align: center;
     color: #fff;
@@ -310,7 +310,7 @@
     }
   }
 
-  &__stats-item-percents {
+  &__statsItemPercents {
     text-align: center;
     font-size: rem(16);
     line-height: 1;

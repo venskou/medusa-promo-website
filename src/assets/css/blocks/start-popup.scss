@@ -7,11 +7,11 @@
   }
 }
 
-.modal-open .start-popup {
+.modal-open .startPopup {
   display: flex !important;
 }
 
-.start-popup {
+.startPopup {
   padding-left: 17px;
   padding-right: 17px;
 
@@ -97,7 +97,7 @@
     animation: spin .4s linear infinite;
   }
 
-  &__close-btn {
+  &__closeBtn {
     display: block;
     width: 21px;
     height: 29px;
@@ -138,13 +138,13 @@
     }
   }
 
-  &__type-label {
+  &__typeLabel {
     display: block;
     font-size: rem(18);
     margin-bottom: 20px;
   }
 
-  &__account-type {
+  &__accountType {
     margin-bottom: 30px;
 
     @media (max-width: $sm-max-width) {
@@ -152,11 +152,11 @@
     }
   }
 
-  &__account-radio {
+  &__accountRadio {
     display: none;
   }
 
-  &__account-label {
+  &__accountLabel {
     display: inline-block;
     vertical-align: top;
     font-weight: 500;
@@ -179,24 +179,25 @@
     }
   }
 
-  &__account-radio:checked + .start-popup__account-label {
+  &__accountRadio:checked + .startPopup__accountLabel {
     color: #371be1;
 
     &::after {
       display: block;
     }
   }
-  .start-popup__email {
+
+  .startPopup__email {
     margin-bottom: 30px;
   }
 
-  .start-popup__email-label {
+  .startPopup__emailLabel {
     display: block;
     font-size: rem(18);
     margin-bottom: 25px;
   }
 
-  &__email-input {
+  &__emailInput {
     background-color: #fff;
     border: 1px solid #d1d1d1;
     border-radius: 5px;
@@ -213,7 +214,7 @@
     }
   }
 
-  &__email-warning {
+  &__emailWarning {
     margin-top: 12px;
     display: block;
     color: #f00;
@@ -221,14 +222,14 @@
     font-weight: 500;
   }
 
-  &__submit-success {
+  &__submitSuccess {
     margin-top: 18px;
     display: block;
     font-weight: 500;
     color: #00b000;
   }
 
-  &__submit-btn {
+  &__submitBtn {
     @media(max-width: $xs-max-width) {
       width: 100%;
     }
