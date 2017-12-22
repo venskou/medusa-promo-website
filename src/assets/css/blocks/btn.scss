@@ -3,37 +3,30 @@
   font-family: $base__font-family;
   display: inline-block;
   vertical-align: top;
-  color: #371be1;
+  color: $blue;
   background-color: #fff;
   font-size: rem(20);
   line-height: 1;
   font-weight: 500;
   border: none;
-  padding: 0;
   border-radius: 5px;
-  padding: 13px 21px 11px 21px;
+  padding: rem(13) rem(21) rem(11) rem(21);
   cursor: pointer;
-  &:hover {
-    color: #371be1;
-  }
-
-  &:focus {
-    color: #371be1;
+  transition: opacity .2s ease-in-out;
+  &:hover, &:focus {
+    color: $blue;
+    opacity: .9;
   }
 }
 
 .btn--blue {
-  color: #fff;
-  background-color: #371be1;
-  padding: 13px 21px 11px 21px;
+  color: $white;
+  background-color: $blue;
+  padding: rem(13) rem(21) rem(11) rem(21);
 
 
-  &:hover {
-    color: #fff;
-    background-color: lighten(#371be1, 4%);
-  }
-
-  &:focus {
-    color: #fff;
+  &:hover, &:focus {
+    color: $white;
+    background-color: $blue-lighten;
   }
 }

@@ -1,5 +1,10 @@
 $white: #fff;
 $black: #090f25;
+$blue: #371be1;
+$blue-lighten: lighten($blue, 6%);
+
+
+
 $text: #5c6689;
 $gray: #f2f5fa;
 $gray_accent: #5c6689;
@@ -7,7 +12,6 @@ $border: #dadee4;
 $green: #46be8a;
 $red: #fb434a;
 $blue-dark: #071437;
-$blue-light: #507fff;
 $purple-deep: #4d173d;
 $purple: #f5f0f5;
 

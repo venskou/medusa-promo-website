@@ -31,186 +31,181 @@
     padding-bottom: 20px;
   }
 
-}
 
-.debit-promo__title {
-  margin: 0 auto;
-  text-align: center;
-  width: 46.4%;
-  margin-bottom: 20px;
+  &__title {
+    margin: 0 auto 20px;
+    text-align: center;
+    width: 46.4%;
 
-  h2 {
-    color: #000;
-    font-weight: 700;
-    font-size: rem(36);
-    line-height: rem(50);
+    h2 {
+      color: #000;
+      font-weight: 700;
+      font-size: rem(36);
+      line-height: rem(50);
 
-    @media(max-width: $xl-max-width) {
-      font-size: rem(30);
-      line-height: rem(44);
+      @media(max-width: $xl-max-width) {
+        font-size: rem(30);
+        line-height: rem(44);
+      }
+
+      @media(max-width: $sm-max-width) {
+        font-size: rem(28);
+        line-height: rem(42);
+      }
+
+      @media(max-width: $sm-max-width) {
+        font-size: rem(25);
+        line-height: rem(39);
+      }
     }
-
-    @media(max-width: $sm-max-width) {
-      font-size: rem(28);
-      line-height: rem(42);
-    }
-
-    @media(max-width: $sm-max-width) {
-      font-size: rem(25);
-      line-height: rem(39);
-    }
-  }
-
-  @media(max-width: $md-max-width) {
-    width: 60%;
-  }
-
-  @media(max-width: $sm-max-width) {
-    width: 70%;
-  }
-
-  @media(max-width: $xs-max-width) {
-    width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 10px;
-  }
-}
-
-.debit-promo__descr {
-  text-align: center;
-  width: 62%;
-  margin: 0 auto;
-  margin-bottom: 39px;
-  position: relative;
-  z-index: 3;
-
-  p {
-    font-weight: 500;
-    font-size: rem(18);
-    line-height: rem(31);
 
     @media(max-width: $md-max-width) {
-      font-size: rem(17);
-      line-height: rem(30);
+      width: 60%;
     }
 
     @media(max-width: $sm-max-width) {
-      font-size: rem(16);
-      line-height: rem(29);
+      width: 70%;
     }
 
     @media(max-width: $xs-max-width) {
-      font-size: rem(15);
-      line-height: rem(28);
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-bottom: 10px;
     }
   }
 
-  @media(max-width: $xl-max-width) {
-    width: 67%;
-    margin-bottom: 30px;
+  &__descr {
+    text-align: center;
+    width: 62%;
+    margin: 0 auto;
+    margin-bottom: 39px;
+    position: relative;
+    z-index: 3;
+
+    p {
+      font-size: rem(18);
+      line-height: rem(31);
+
+      @media(max-width: $md-max-width) {
+        font-size: rem(17);
+        line-height: rem(30);
+      }
+
+      @media(max-width: $sm-max-width) {
+        font-size: rem(16);
+        line-height: rem(29);
+      }
+
+      @media(max-width: $xs-max-width) {
+        font-size: rem(15);
+        line-height: rem(28);
+      }
+    }
+
+    @media(max-width: $xl-max-width) {
+      width: 67%;
+      margin-bottom: 30px;
+    }
+
+    @media(max-width: $md-max-width) {
+      width: 70%;
+      margin-bottom: 20px;
+    }
+
+    @media(max-width: $sm-max-width) {
+      width: 85%;
+      margin-bottom: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @media(max-width: $xs-max-width) {
+      width: 100%;
+    }
   }
 
-  @media(max-width: $md-max-width) {
-    width: 70%;
+  &__partners {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
     margin-bottom: 20px;
   }
 
-  @media(max-width: $md-max-width) {
-    width: 70%;
-    margin-bottom: 20px;
+  &__partner {
+
+    &:first-child {
+      margin-left: auto;
+      margin-right: 30px;
+    }
+
+    &:last-child {
+      margin-right: auto;
+    }
   }
 
-  @media(max-width: $sm-max-width) {
-    width: 85%;
-    margin-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  @media(max-width: $xs-max-width) {
+  &__card-wrap {
     width: 100%;
   }
+
+  &__card {
+    position: relative;
+    left: 32px;
+    margin: 0 auto;
+    width: 585px;
+    height: 415px;
+    background-size: 585px 415px;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/img/card_form@1x.png);
+    overflow: hidden;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url(../../assets/img/card_form@2x.png);
+    }
+
+    @media(max-width: $sm-max-width) {
+      width: 556px;
+      height: 386px;
+      background-size: 556px 386px;
+    }
+
+    @media(max-width: 575px) {
+      width: 320px;
+      height: 220px;
+      background-size: 320px 220px;
+      left: 8px;
+    }
+  }
+
+  &__card-bg {
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    animation-name: smallscale;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    background-image: url(../../assets/img/card_form_bg@1x.jpg);
+    z-index: -1;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url(../../assets/img/card_form_bg@2x.jpg);
+    }
+
+    @media(max-width: 575px) {
+      width: 290px;
+      top: 5px;
+      height: 220px;
+      right: 15px;
+      // background-size: 320px 220px;
+    }
+  }
+
 }
 
-.debit-promo__partners {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-.debit-promo__partner {
-
-  &:first-child {
-    margin-left: auto;
-    margin-right: 30px;
-  }
-
-  &:last-child {
-    margin-right: auto;
-  }
-}
-
-.debit-promo__card-wrap {
-  width: 100%;
-}
-
-.debit-promo__card {
-  position: relative;
-  left: 32px;
-  margin: 0 auto;
-  width: 585px;
-  height: 415px;
-  background-size: 585px 415px;
-  background-repeat: no-repeat;
-  background-image: url(../../assets/img/card_form@1x.png);
-  overflow: hidden;
-
-  @media (min-resolution: 1.5dppx) {
-    background-image: url(../../assets/img/card_form@2x.png);
-  }
-
-  @media(max-width: $sm-max-width) {
-    width: 556px;
-    height: 386px;
-    background-size: 556px 386px;
-  }
-
-  @media(max-width: 575px) {
-    width: 320px;
-    height: 220px;
-    background-size: 320px 220px;
-    left: 8px;
-  }
-}
-
-.debit-promo__card-bg {
-  background-size: cover;
-  background-position: center center;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  animation-name: smallscale;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-timing-function: ease-in-out;
-  background-image: url(../../assets/img/card_form_bg@1x.jpg);
-  z-index: -1;
-
-  @media (min-resolution: 1.5dppx) {
-    background-image: url(../../assets/img/card_form_bg@2x.jpg);
-  }
-
-  @media(max-width: 575px) {
-    width: 290px;
-    top: 5px;
-    height: 220px;
-    right: 15px;
-    // background-size: 320px 220px;
-  }
-}

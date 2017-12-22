@@ -4,123 +4,123 @@
   @media (max-width: $sm-max-width) {
     margin-bottom: 45px;
   }
-}
 
-.feedback__wrapper {
-  background-color: #f7f6fb;
-  background-repeat: no-repeat;
-  background-image: url(../../assets/img/quotes_bg@1x.jpg);
-  background-size: contain;
-  @media (min-resolution: 1.5dppx) {
-    background-image: url(../../assets/img/quotes_bg@2x.png);
-  }
-
-  @media (max-width: $md-max-width) {
-    background-image: none;
-  }
-
-  .row {
-    height: 100%;
-  }
-}
-
-.feedback__item {
-  padding-left: 50px;
-  padding-right: 70px;
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 87px;
-    height: 79px;
-    top: 56px;
-    left: -60px;
+  &__wrapper {
+    background-color: #f7f6fb;
     background-repeat: no-repeat;
-    background-size: 87px 79px;
-    background-image: url(../../assets/img/quotes__icon@1x.png);
+    background-image: url(../../assets/img/quotes_bg@1x.jpg);
+    background-size: contain;
     @media (min-resolution: 1.5dppx) {
-      background-image: url(../../assets/img/quotes__icon@2x.png);
+      background-image: url(../../assets/img/quotes_bg@2x.png);
+    }
+
+    @media (max-width: $md-max-width) {
+      background-image: none;
+    }
+
+    .row {
+      height: 100%;
+    }
+  }
+
+  &__item {
+    padding-left: 50px;
+    padding-right: 70px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 87px;
+      height: 79px;
+      top: 56px;
+      left: -60px;
+      background-repeat: no-repeat;
+      background-size: 87px 79px;
+      background-image: url(../../assets/img/quotes__icon@1x.png);
+      @media (min-resolution: 1.5dppx) {
+        background-image: url(../../assets/img/quotes__icon@2x.png);
+      }
+
+      @media(max-width: $md-max-width) {
+        left: 23px;
+        width: 74px;
+        height: 66px;
+        top: 55px;
+        background-repeat: no-repeat;
+        background-size: 74px 66px;
+      }
+
+      @media(max-width: $xs-max-width) {
+        display: none;
+      }
     }
 
     @media(max-width: $md-max-width) {
-      left: 23px;
-      width: 74px;
-      height: 66px;
-      top: 55px;
-      background-repeat: no-repeat;
-      background-size: 74px 66px;
+      padding-left: 140px;
+      padding-right: 40px;
     }
 
     @media(max-width: $xs-max-width) {
-      display: none;
+      padding-left: 30px;
+      padding-right: 30px;
     }
   }
 
-  @media(max-width: $md-max-width) {
-    padding-left: 140px;
-    padding-right: 40px;
-  }
-
-  @media(max-width: $xs-max-width) {
-    padding-left: 30px;
-    padding-right: 30px;
-  }
-}
-
-.feedback__text {
-  padding-top: 50px;
-  margin-bottom: 35px;
-  p {
-    font-size: rem(18);
-    line-height: rem(30);
-  }
-
-  @media (max-width: $md-max-width) {
-    margin-bottom: 10px;
-
+  &__text {
+    padding-top: 50px;
+    margin-bottom: 35px;
     p {
-      font-size: rem(14);
-      line-height: rem(26);
+      font-size: rem(18);
+      line-height: rem(30);
+    }
+
+    @media (max-width: $md-max-width) {
+      margin-bottom: 10px;
+
+      p {
+        font-size: rem(14);
+        line-height: rem(26);
+      }
+    }
+
+    @media(max-width: $xs-max-width) {
+      padding-top: 30px;
     }
   }
 
-  @media(max-width: $xs-max-width) {
-    padding-top: 30px;
-  }
-}
+  &__author {
+    margin-bottom: 30px;
 
-.feedback__author {
-  margin-bottom: 30px;
+    span {
+      font-weight: 700;
+      font-style: italic;
+      font-family: $base__font-family;
+    }
 
-  span {
-    font-weight: 700;
-    font-style: italic;
-    font-family: $base__font-family;
-  }
-
-  @media (max-width: $md-max-width) {
-    margin-bottom: 10px;
-  }
-}
-
-.feedback__author-logo {
-  span {
-    display: inline-block;
-    width: 122px;
-    height: 63px;
-    background-repeat: no-repeat;
-    background-image: url(../../assets/img/daily-graph@1x.png);
-    background-size: 122px 63px;
-    @media (min-resolution: 1.5dppx) {
-      background-image: url(../../assets/img/daily-graph@2x.png);
+    @media (max-width: $md-max-width) {
+      margin-bottom: 10px;
     }
   }
-  padding-bottom: 50px;
 
-  @media(max-width: $md-max-width) {
-    padding-bottom: 30px;
+  &__author-logo {
+    span {
+      display: inline-block;
+      width: 122px;
+      height: 63px;
+      background-repeat: no-repeat;
+      background-image: url(../../assets/img/daily-graph@1x.png);
+      background-size: 122px 63px;
+      @media (min-resolution: 1.5dppx) {
+        background-image: url(../../assets/img/daily-graph@2x.png);
+      }
+    }
+    padding-bottom: 50px;
+
+    @media(max-width: $md-max-width) {
+      padding-bottom: 30px;
+    }
   }
-}
 
+}
