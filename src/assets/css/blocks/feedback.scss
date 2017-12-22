@@ -5,8 +5,14 @@
     margin-bottom: 45px;
   }
 
+  @media (max-width: $xs-max-width) {
+    background-color: $purple-pale;
+  }
+
+
+
   &__wrapper {
-    background-color: #f7f6fb;
+    background-color: $purple-pale;
     background-repeat: no-repeat;
     background-image: url(../../assets/img/quotes_bg@1x.jpg);
     background-size: contain;
@@ -63,8 +69,8 @@
     }
 
     @media(max-width: $xs-max-width) {
-      padding-left: 30px;
-      padding-right: 30px;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 

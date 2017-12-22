@@ -17,16 +17,21 @@
     color: $blue;
     opacity: .9;
   }
-}
 
-.btn--blue {
-  color: $white;
-  background-color: $blue;
-  padding: rem(13) rem(21) rem(11) rem(21);
-
-
-  &:hover, &:focus {
+  &--blue {
     color: $white;
-    background-color: $blue-lighten;
+    background-color: $blue;
+    padding: rem(13) rem(21) rem(11) rem(21);
+    &:hover, &:focus {
+      color: $white;
+      background-color: $blue-lighten;
+    }
+  }
+
+  &--transparent {
+    background-color: transparent;
+    &:focus {
+      color: $white;
+    }
   }
 }

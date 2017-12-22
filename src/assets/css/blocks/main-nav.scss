@@ -362,10 +362,17 @@
       transition: all ease-in-out 0.2s;
       cursor: pointer;
 
-      &:hover, &:focus {
+      &:hover {
         color: rgba($white, 0.7);
+      }
+
+      &:focus {
+        color: $white;
+      }
+
+      &:hover {
         &:focus {
-          color: rgba($white, 0.7);
+          color: $white;
         }
       }
 
@@ -388,12 +395,28 @@
           background-color: $blue-lighten;
         }
       }
+
+      &--bordered {
+        border-radius: 5px;
+        border: 1px solid $white;
+        padding: rem(13) rem(24);
+        &:hover {
+          color: rgba($white, 0.8);
+        }
+
+        &:focus {
+          color: $white;
+        }
+      }
     }
 
     &__link-text {
       position: relative;
       z-index: 10;
       cursor: pointer;
+      &:focus {
+        color: $white;
+      }
     }
 
     &__link-badge {
@@ -799,10 +822,14 @@
     &__bottom-link {
       display: block;
       font-weight: 700;
-      color: $blue-lighten;
+      color: $blue;
       text-transform: uppercase;
       letter-spacing: 0.9px;
       font-size: rem(15);
+
+      &:focus {
+        color: $blue;
+      }
     }
   }
 }
