@@ -150,7 +150,7 @@
         right: 165px;
         width: 356px;
         height: 251px;
-        background-size: 356px 251px;
+        background-size: 356px 253px;
         @media (min-resolution: 1.5dppx) {
           background-image: url(../../assets/img/fourth_feature_symbol@2x.jpg);
         }
@@ -161,13 +161,9 @@
         }
 
         @media(max-width: $sm-max-width) {
-          right: 80px;
-          background-size: 130px 301px;
-        }
-
-        @media(max-width: 575px) {
-          right: 0px;
-          background-size: 107px 201px;
+          top: 55px;
+          right: 10px;
+          background-size: 356px 253px;
         }
       }
     }
