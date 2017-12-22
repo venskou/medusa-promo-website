@@ -112,9 +112,9 @@
     height: 63px;
     background-repeat: no-repeat;
     background-image: url(../../assets/img/daily-graph@1x.png);
-
+    background-size: 122px 63px;
     @media (min-resolution: 1.5dppx) {
-      background-image: url(../../assets/img/daily-graph@@2x.png);
+      background-image: url(../../assets/img/daily-graph@2x.png);
     }
   }
   padding-bottom: 50px;

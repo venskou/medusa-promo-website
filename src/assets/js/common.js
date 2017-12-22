@@ -3,14 +3,14 @@ $(function () {
 	//////////////////////////////////////////////////
     // Fixed Menu
 
-    $(window).on('scroll', function() {
-        var scrollTop = $(window).scrollTop();
-        if (scrollTop > 48) {
-            $('.mdtc__global-nav').addClass('mdtc__global-nav--transformed')
-        } else {
-            $('.mdtc__global-nav').removeClass('mdtc__global-nav--transformed')
-        }
-    });
+    // $(window).on('scroll', function() {
+    //     var scrollTop = $(window).scrollTop();
+    //     if (scrollTop > 48) {
+    //         $('.mdtc__global-nav').addClass('mdtc__global-nav--transformed')
+    //     } else {
+    //         $('.mdtc__global-nav').removeClass('mdtc__global-nav--transformed')
+    //     }
+    // });
 
     //////////////////////////////////////////////////
     // Mobile Menu
@@ -266,7 +266,6 @@ function startAnimation() {
             maxColumnPercents = columns[i].percents;
         }
     }
-    console.log(maxColumnPercents);
 
     columns.forEach(function(column) {
         var columnElem = '.page-header__stats-item--' + column.name;
@@ -276,7 +275,6 @@ function startAnimation() {
         if(columnTextOpacity < 0.2) {
             columnTextOpacity = 0.2
         }
-        console.log(columnTextOpacity)
         $(columnElem).velocity({
             top: columnCssTop,
             tween: column.percents
@@ -313,6 +311,6 @@ $(document).ready(function() {
 
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('click')
-  })
+    })
 });
 
