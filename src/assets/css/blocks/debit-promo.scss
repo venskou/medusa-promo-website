@@ -154,9 +154,9 @@
     position: relative;
     left: 32px;
     margin: 0 auto;
-    width: 585px;
-    height: 415px;
-    background-size: 585px 415px;
+    width: 586px;
+    height: 455px;
+    background-size: 586px 455px;
     background-repeat: no-repeat;
     background-image: url(../../assets/img/card_form@1x.png);
     overflow: hidden;
@@ -167,14 +167,14 @@
 
     @media(max-width: $sm-max-width) {
       width: 556px;
-      height: 386px;
-      background-size: 556px 386px;
+      height: 432px;
+      background-size: 556px 432px;
     }
 
     @media(max-width: 575px) {
       width: 320px;
-      height: 220px;
-      background-size: 320px 220px;
+      height: 249px;
+      background-size: 320px 249px;
       left: 8px;
     }
   }
@@ -186,7 +186,7 @@
     top: 10px;
     left: 10px;
     right: 10px;
-    bottom: 10px;
+    bottom: 50px;
     animation-name: smallscale;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;

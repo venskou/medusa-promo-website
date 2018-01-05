@@ -124,8 +124,8 @@
   }
 
   &__text {
-    font-size: rem(18);
-    line-height: rem(36);
+    font-size: rem(16);
+    line-height: rem(28);
     margin-bottom: 46px;
 
     @media (max-width: $sm-max-width) {
@@ -140,8 +140,8 @@
 
   &__typeLabel {
     display: block;
-    font-size: rem(18);
-    margin-bottom: 20px;
+    font-size: rem(16);
+    margin-bottom: 15px;
   }
 
   &__accountType {
@@ -160,7 +160,7 @@
     display: inline-block;
     vertical-align: top;
     font-weight: 500;
-    font-size: rem(18);
+    font-size: rem(16);
     line-height: rem(40);
     margin-right: 22px;
     position: relative;
@@ -193,8 +193,8 @@
 
   .startPopup__emailLabel {
     display: block;
-    font-size: rem(18);
-    margin-bottom: 25px;
+    font-size: rem(16);
+    margin-bottom: 15px;
   }
 
   &__emailInput {
@@ -203,11 +203,8 @@
     border-radius: 5px;
     display: block;
     width: 82%;
-    font-size: rem(18);
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: rem(16);
+    padding: 9px 11px 7px;
 
     @media(max-width: $xs-max-width) {
       width: 100%;
