@@ -312,5 +312,24 @@ $(document).ready(function() {
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('click')
     })
+
+
+    $('.features__item').map(function(index, element) {
+        var item = element;
+        var itemDistance = $(item).offset().top;
+        var viewportHeight = $(window).height();
+        var startAnimationPoint = itemDistance - viewportHeight / 2;
+        $(window).resize(function() {
+            itemDistance = $(item).offset().top;
+            viewportHeight = $(window).height();
+            startAnimationPoint = itemDistance - viewportHeight / 2;
+        });
+        $(window).scroll(function() {
+            var docScroll = $(window).scrollTop();
+            if(docScroll > startAnimationPoint) {
+                $(item).addClass('animate');
+            }
+        })
+    });
 });
 

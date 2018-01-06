@@ -1,420 +1,166 @@
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 250;
+  }
+}
+
 .features {
-  padding-top: 149px;
-  color: #000;
-  padding-bottom: 80px;
-
-  @media(max-width: $xl-max-width) {
-    padding-top: 110px;
-  }
-
-  @media(max-width: $md-max-width) {
-    padding-top: 80px;
-    padding-bottom: 40px;
-  }
+  padding-top: rem(134);
+  padding-bottom: rem(134);
 
   @media(max-width: 575px) {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+  }
+
+  &__progressBar {
+    width: 90px;
+    height: 100%;
+    position: relative;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @media(max-width: 575px) {
+      display: none;
+    }
+  }
+
+  &__progressChart {
+    width: 90px;
+    height: 90px;
+    stroke: $blue;
+    position: relative;
+    svg {
+      position: relative;
+      z-index: 20;
+      transform: rotate(180deg) translateZ(0);
+    }
+  }
+
+  &__circleBg {
+    fill: none;
+    stroke-width: 6px;
+    stroke: $purple-light;
+  }
+
+  &__circle {
+    fill: none;
+    stroke: $purple-light;
+    stroke-width: 6px;
+  }
+
+  &__progressNumber {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1;
+    font-size: rem(30);
+    color: $blue;
+    font-weight: 700;
+  }
+
+  &__progressLine {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 84px;
+    bottom: -5px;
+    width: 6px;
+    background-color: $purple-light;
+    z-index: 10;
+  }
+
+  &__progressLineFill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    background-color: $blue;
+    transition: bottom 0.7s linear 0.7s;
   }
 
   &__item {
-    margin-bottom: 100px;
-    background-repeat:no-repeat;
-    position: relative;
 
-    &::before {
-      content: '';
-      position: absolute;
-      display: block;
-      background-repeat: no-repeat;
-      z-index: -1;
-    }
+    &.animate {
 
-    @media(max-width: $sm-max-width) {
-      margin-bottom: 70px;
-    }
-
-    @media(max-width: 575px) {
-      margin-bottom: 40px;
-
-      &::before {
-        display: none;
+      .features__circle {
+        stroke-linecap: round;
+        stroke: $blue;
+        animation: progress 0.7s linear forwards;
       }
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    /*
-
-    &--first {
-      &::before {
-        background-image: url(../../assets/img/first_feature_symbol@1x.jpg);
-        top: 50px;
-        left: 160px;
-        width: 228px;
-        height: 330px;
-        background-size: 228px 330px;
-        @media (min-resolution: 1.5dppx) {
-          background-image: url(../../assets/img/first_feature_symbol@2x.jpg);
-        }
-
-        @media(max-width: $xl-max-width) {
-          top: 70px;
-        }
-
-        @media(max-width: $md-max-width) {
-          top: 75px;
-        }
-
-        @media(max-width: $sm-max-width) {
-          left: 50px;
-        }
-
-        @media(max-width: 575px) {
-          left: 10px;
-          top: 70px;
-          background-size: 158px 209px;
-        }
-      }
-    }
-
-    &--second {
-      &::before {
-        background-image: url(../../assets/img/second_feature_symbol@1x.jpg);
-        top: -13px;
-        right: 165px;
-        width: 150px;
-        height: 321px;
-        background-size: 150px 321px;
-        @media (min-resolution: 1.5dppx) {
-          background-image: url(../../assets/img/second_feature_symbol@2x.jpg);
-        }
-
-        @media(max-width: $md-max-width) {
-          top: 0px;
-          right: 150px;
-        }
-
-        @media(max-width: $sm-max-width) {
-          right: 80px;
-          background-size: 130px 301px;
-        }
-
-        @media(max-width: 575px) {
-          right: 0px;
-          background-size: 107px 201px;
-        }
-      }
-    }
-
-    &--third {
-      margin-bottom: 150px;
-
-      &::before {
-        background-image: url(../../assets/img/third_feature_symbol@1x.jpg);
-        top: 27px;
-        left: 103px;
-        width: 379px;
-        height: 334px;
-        background-size: 379px 334px;
-        @media (min-resolution: 1.5dppx) {
-          background-image: url(../../assets/img/third_feature_symbol@2x.jpg);
-        }
-
-        @media(max-width: $md-max-width) {
-          top: 35px;
-          background-size: 362px 317px;
-        }
-
-        @media(max-width: $sm-max-width) {
-          background-size: 348px 303px;
-          left: 50px;
-        }
-
-        @media(max-width: 575px) {
-          top: 60px;
-          left: 10px;
-          background-size: 267px 222px;
-        }
-      }
-
-      @media (max-width: 575px) {
-        margin-bottom: 40px;
-      }
-    }
-
-    &--fourth {
-      &::before {
-        background-image: url(../../assets/img/fourth_feature_symbol@1x.jpg);
-        top: 70px;
-        right: 165px;
-        width: 356px;
-        height: 251px;
-        background-size: 356px 253px;
-        @media (min-resolution: 1.5dppx) {
-          background-image: url(../../assets/img/fourth_feature_symbol@2x.jpg);
-        }
-
-        @media(max-width: $md-max-width) {
-          top: 0px;
-          right: 150px;
-        }
-
-        @media(max-width: $sm-max-width) {
-          top: 55px;
-          right: 10px;
-          background-size: 356px 253px;
-        }
-      }
-    }
-    */
-
-  }
-
-  &__item-number {
-    span {
-      font-size: rem(180);
-      line-height: 1;
-      font-weight: 700;
-      display: none;
-      vertical-align: top;
-    }
-
-    @media(max-width: 575px) {
-      display: none;
-    }
-
-    &--first {
-      span {
-        margin-top: -33px;
-        padding-left: 48px;
-
-        @media (max-width: $md-max-width) {
-          margin-top: -18px;
-          padding-left: 10px;
-          font-size: rem(160);
-        }
-
-        @media (max-width: $sm-max-width) {
-          font-size: rem(130);
-          margin-top: -9px;
-        }
-      }
-    }
-
-    &--second {
-      span {
-        margin-top: -33px;
-        padding-left: 0px;
-
-        @media (max-width: $md-max-width) {
-          margin-top: -18px;
-          font-size: rem(160);
-        }
-
-        @media (max-width: $sm-max-width) {
-          font-size: rem(130);
-          margin-top: -2px;
-        }
-      }
-    }
-
-    &--third {
-      span {
-        margin-top: -33px;
-        padding-left: 14px;
-
-        @media (max-width: $md-max-width) {
-          margin-top: -18px;
-          padding-left: 0px;
-          font-size: rem(160);
-        }
-
-        @media (max-width: $sm-max-width) {
-          font-size: rem(130);
-          margin-top: -9px;
-        }
-      }
-    }
-
-    &--fourth {
-      span {
-        margin-top: -33px;
-        padding-left: 0px;
-
-        @media (max-width: $md-max-width) {
-          margin-top: -18px;
-          font-size: rem(160);
-        }
-
-        @media (max-width: $sm-max-width) {
-          font-size: rem(130);
-          margin-top: -2px;
-        }
+      .features__progressLineFill {
+        bottom: 0;
       }
     }
   }
 
-  &__item-title {
-    // margin-left: 51px;
-    position: relative;
-    margin-bottom: 34px;
+  &__title {
+    margin-bottom: rem(34);
 
     h2 {
       font-size: rem(24);
       line-height: rem(34);
       font-weight: 700;
-      // padding-left: 62px;
-
-      @media(max-width: 575px) {
-        font-size: rem(22);
-        line-height: rem(32);
-      }
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      left: -62px;
-      top: 0;
-      bottom: 7px;
-      display: block;
-      width: 26px;
-      background-color: #000;
-
-      @media(max-width: 575px) {
-        left: 0;
-      }
-    }
-
-    &--first {
-      width: 640px;
-
-      @media(max-width: $md-max-width) {
-        width: 500px;
-      }
-
-      @media(max-width: $sm-max-width) {
-        width: 400px;
-        margin-bottom: 25px;
-      }
-
-      @media(max-width: 575px) {
-        width: 100%;
-        padding-left: 50px;
-      }
-
-      @media(max-width: $xs-max-width) {
-        margin-bottom: 15px;
-      }
-    }
-
-    &--second {
-      width: 360px;
-
-      @media(max-width: $md-max-width) {
-        padding-left: 62px;
-        &::before {
-          left: 0;
-        }
-      }
-
-      @media(max-width: 575px) {
-        padding-left: 50px;
-        width: 80%;
-      }
-
-      @media(max-width: 370px) {
-        width: 100%;
-      }
-    }
-
-    &--third {
-      width: 360px;
-
-      @media(max-width: 575px) {
-        padding-left: 50px;
-      }
-
-      @media(max-width: 400px) {
-        width: 100%;
-      }
     }
   }
 
-  &__descr-text {
-    position: relative;
+  &__descr {
+    padding-bottom: rem(70);
+  }
+
+  &__itemText {
 
     p {
-      font-size: rem(18);
       line-height: rem(30);
+      font-size: rem(18);
 
       &:last-child {
         margin-bottom: 0;
       }
+    }
 
-      @media(max-width: 575px) {
-        font-size: rem(16);
-        line-height: rem(28);
-      }
+    @media(max-width: $md-max-width) {
+      margin-bottom: rem(44);
     }
   }
 
-  &__descr-list {
+  &__list {
     margin: 0;
     padding: 0;
     list-style: none;
+    background-color: $purple-light;
+    padding-top: rem(43);
+    padding-left: rem(43);
+    padding-bottom: rem(43);
+    padding-right: rem(43);
+    margin-right: rem(70);
 
-    &--first {
-      margin-left: 31px;
-
-      @media (max-width: $md-max-width) {
-        margin-top: 20px;
-        margin-left: 0;
-      }
-    }
-
-    &--third {
-      margin-left: 31px;
-
-      @media (max-width: $md-max-width) {
-        margin-left: 0;
-      }
+    @media(max-width: $md-max-width) {
+      margin-right: 0;
     }
   }
 
-  &__list-item {
+  &__listItem {
     display: block;
-    padding-left: 25px;
+    font-size: rem(16);
+    line-height: rem(26);
+    margin-bottom: rem(10);
+    font-weight: 700;
     position: relative;
-    font-size: rem(18);
-    line-height: rem(30);
-    margin-bottom: 16px;
+    padding-left: rem(40);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
 
     &::before {
-      content: '';
-      display: block;
-      height: 2px;
-      width: 18px;
+      content: '—';
       position: absolute;
       left: 0;
-      top: 15px;
-      background-color: #000;
-
-      @media(max-width: 575px) {
-        top: 11px;
-      }
-    }
-
-    @media(max-width: 575px) {
-      font-size: rem(17);
-      line-height: rem(29);
-    }
-
-    @media(max-width: $xs-max-width) {
-      margin-bottom: 8px;
     }
   }
 }
