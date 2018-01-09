@@ -292,7 +292,6 @@ function animationCalculations() {
     animationInterval = columns[columns.length-1].duration + columns[columns.length-1].delay;
 };
 function startAnimation() {
-    console.log('joj')
     columns.forEach(function(column, index) {
         var columnElem = '.pageHeader__statsItem--' + column.name;
         var columnCssTop = 100 - column.height + '%'
