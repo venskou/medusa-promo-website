@@ -218,6 +218,7 @@ var columns = [
     percents: 280,
     delay: 0,
     duration: 0,
+    hideTime: 0,
 },
 {
     height: 31.5,
@@ -225,6 +226,7 @@ var columns = [
     percents: 640,
     delay: 0,
     duration: 0,
+    hideTime: 0,
 },
 {
     height: 64.4,
@@ -232,6 +234,7 @@ var columns = [
     percents: 970,
     delay: 0,
     duration: 0,
+    hideTime: 0,
 },
 {
     height: 53.9,
@@ -239,6 +242,7 @@ var columns = [
     percents: 830,
     delay: 0,
     duration: 0,
+    hideTime: 0,
 },
 {
     height: 44.4,
@@ -246,6 +250,7 @@ var columns = [
     percents: 720,
     delay: 0,
     duration: 0,
+    hideTime: 0,
 },
 {
     height: 99.3,
@@ -253,6 +258,7 @@ var columns = [
     percents: 1860,
     delay: 0,
     duration: 0,
+    hideTime: 0,
 },
 {
     height: 60.0,
@@ -260,6 +266,7 @@ var columns = [
     percents: 940,
     delay: 0,
     duration: 0,
+    hideTime: 0,
 },
 {
     height: 31.4,
@@ -267,6 +274,7 @@ var columns = [
     percents: 670,
     delay: 0,
     duration: 0,
+    hideTime: 0,
 },
 {
     height: 91.3,
@@ -274,6 +282,7 @@ var columns = [
     percents: 1460,
     delay: 0,
     duration: 0,
+    hideTime: 0,
 }
 ]
 
@@ -290,7 +299,22 @@ function animationCalculations() {
         }
     }
     animationInterval = columns[columns.length-1].duration + columns[columns.length-1].delay;
+
+
+
 };
+
+// function animationHiddenCalculations() {
+//     for( var i = 0; i<columns.length; i++ ) {
+//         if(i < 5) {
+//             columns[i].hideTime = columns[i+4].duration + columns[i+4].delay;
+//         } else {
+//             columns[i].hideTime = columns[]
+//         }
+//     }
+// }
+
+
 function startAnimation() {
     columns.forEach(function(column, index) {
         var columnElem = '.pageHeader__statsItem--' + column.name;
@@ -311,6 +335,13 @@ function startAnimation() {
                 var percents = $(columnElem + ' .pageHeader__statsItemPercents')
                 .text('+' + Math.round(tweenValue) + '%');
                 return percents;
+            },
+            complete: function() {
+                setTimeout(function() {
+                    $(columnElem).css({
+                        'top': '100%',
+                    });
+                }, 5000);
             }
         });
 
@@ -335,16 +366,13 @@ function startAnimation() {
 }
 
 $(document).ready(function() {
-    animationCalculations()
+    animationCalculations();
+    // animationHiddenCalculations()
+
     startAnimation();
 
     setInterval(function() {
-    $('.pageHeader__statsItem').each(function(i, elem) {
-        $(elem).css({
-            'top':'100%'
-        });
-    });
-    startAnimation();
+        startAnimation();
     }, animationInterval + 2000);
 
     $('#myModal').on('shown.bs.modal', function () {

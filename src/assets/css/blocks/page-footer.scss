@@ -115,7 +115,8 @@
 
   &__logo {
     position: relative;
-    padding-bottom: rem(12);
+    top: -7px;
+    padding-bottom: rem(25);
     width: 145px;
     height: 33px;
     display: inline-block;
@@ -127,14 +128,10 @@
       display: inline-block;
       vertical-align: top;
       width: 145px;
-      height: 33px;
+      height: 49px;
       background-repeat: no-repeat;
-      background-size: 145px 33px;
-      background-image: url(../../assets/img/bottom-logo@1x.png);
-
-      @media (min-resolution: 1.5dppx) {
-        background-image: url(../../assets/img/bottom-logo@2x.png);
-      }
+      background-size: 145px 49px;
+      background-image: url(../../assets/img/logo_blue.png);
     }
   }
 

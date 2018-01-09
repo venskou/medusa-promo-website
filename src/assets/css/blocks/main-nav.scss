@@ -1,7 +1,7 @@
 .mdtc {
 
   &__global-nav {
-    margin-bottom: -110px;
+    margin-bottom: -103px;
     margin-top: 60px;
     position: absolute;
     left: 0;
@@ -60,11 +60,7 @@
 
         span {
           @media(min-width: $md-min-width) {
-            background-image: url(../../assets/img/top-logo-inverted@1x.png);
-
-            @media (min-resolution: 1.5dppx) {
-              background-image: url(../../assets/img/top-logo-inverted@2x.png);
-            }
+            background-image: url(../../assets/img/logo.png);
           }
         }
       }
@@ -139,6 +135,7 @@
 
     &__img {
       position: relative;
+      top: -11px;
       padding-bottom: rem(12);
       width: 230px;
 
@@ -146,15 +143,14 @@
         display: inline-block;
         vertical-align: top;
         width: 184px;
-        height: 42px;
+        height: 60px;
         background-repeat: no-repeat;
-        background-size: 184px 42px;
-        background-image: url(../../assets/img/top-logo@1x.png);
+        background-size: 184px 60px;
+        background-image: url(../../assets/img/logo.png);
+      }
 
-        @media (min-resolution: 1.5dppx) {
-          background-image: url(../../assets/img/top-logo@2x.png),
-        }
-
+      @media(max-width: $md-max-width) {
+        top: -7px;
       }
     }
 
