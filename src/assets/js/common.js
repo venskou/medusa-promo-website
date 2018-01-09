@@ -208,7 +208,7 @@ Strut.ready(function() {
 });
 
 
-var duration = 3000;
+var duration = 2000;
 var one_tenth_time = (duration / 100) / 10;
 
 var columns = [
@@ -216,62 +216,88 @@ var columns = [
     height: 22.8,
     name: 'btg',
     percents: 280,
+    delay: 0,
+    duration: 0,
 },
 {
     height: 31.5,
     name: 'emc2',
     percents: 640,
+    delay: 0,
+    duration: 0,
 },
 {
     height: 64.4,
     name: 'powr',
     percents: 970,
+    delay: 0,
+    duration: 0,
 },
 {
     height: 53.9,
     name: 'iota',
     percents: 830,
+    delay: 0,
+    duration: 0,
 },
 {
     height: 44.4,
     name: 'xmr',
     percents: 720,
+    delay: 0,
+    duration: 0,
 },
 {
     height: 99.3,
     name: 'eos',
     percents: 1860,
+    delay: 0,
+    duration: 0,
 },
 {
     height: 60.0,
     name: 'neo',
     percents: 940,
+    delay: 0,
+    duration: 0,
 },
 {
     height: 31.4,
     name: 'nxt',
     percents: 670,
+    delay: 0,
+    duration: 0,
 },
 {
     height: 91.3,
     name: 'xpr',
     percents: 1460,
+    delay: 0,
+    duration: 0,
 }
 ]
 
-function startAnimation() {
-    var maxColumnPercents = 0;
-    for(var i = 0; i < columns.length; i++) {
-        if(columns[i].percents > maxColumnPercents) {
+var maxColumnPercents = 0;
+var animationInterval;
+function animationCalculations() {
+    for( var i = 0; i<columns.length; i++ ) {
+        columns[i].duration = (columns[i].height / 0.1) * one_tenth_time;
+        if (columns[i].percents > maxColumnPercents) {
             maxColumnPercents = columns[i].percents;
         }
+        if (i > 0) {
+            columns[i].delay = columns[i-1].delay + columns[i-1].duration
+        }
     }
-
-    columns.forEach(function(column) {
+    animationInterval = columns[columns.length-1].duration + columns[columns.length-1].delay;
+};
+function startAnimation() {
+    console.log('joj')
+    columns.forEach(function(column, index) {
         var columnElem = '.pageHeader__statsItem--' + column.name;
         var columnCssTop = 100 - column.height + '%'
-        var columnDuration = (column.height / 0.1) * one_tenth_time;
         var columnTextOpacity = ((1 / maxColumnPercents) * column.percents).toFixed(1) + '';
+
         if(columnTextOpacity < 0.2) {
             columnTextOpacity = 0.2
         }
@@ -280,7 +306,8 @@ function startAnimation() {
             tween: column.percents
         }, {
             easing: 'ease-in-out',
-            duration: columnDuration,
+            duration: column.duration,
+            delay: column.delay,
             progress: function(elements, complete, remaining, start, tweenValue) {
                 var percents = $(columnElem + ' .pageHeader__statsItemPercents')
                 .text('+' + Math.round(tweenValue) + '%');
@@ -292,7 +319,8 @@ function startAnimation() {
             opacity: columnTextOpacity
         }, {
             easing: 'easeInSine',
-            duration: columnDuration,
+            duration: column.duration,
+            delay: column.delay,
             queue: false,
         });
 
@@ -300,14 +328,25 @@ function startAnimation() {
             opacity: columnTextOpacity
         }, {
             easing: 'easeInSine',
-            duration: columnDuration,
+            duration: column.duration,
+            delay: column.delay,
             queue: false,
         });
     });
-};
+}
 
 $(document).ready(function() {
+    animationCalculations()
     startAnimation();
+
+    setInterval(function() {
+    $('.pageHeader__statsItem').each(function(i, elem) {
+        $(elem).css({
+            'top':'100%'
+        });
+    });
+    startAnimation();
+    }, animationInterval + 2000);
 
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('click')

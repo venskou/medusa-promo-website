@@ -12,8 +12,8 @@
 }
 
 .startPopup {
-  padding-left: 17px;
-  padding-right: 17px;
+  padding-left: rem(17);
+  padding-right: rem(17);
 
   .modal-dialog {
     max-width: 697px;
@@ -22,20 +22,20 @@
 
   .modal-header {
     padding-top: 63px;
-    padding-left: 66px;
-    padding-right: 66px;
+    padding-left: rem(66);
+    padding-right: rem(66);
     border-bottom: none;
 
     @media (max-width: $sm-max-width) {
-      padding-top: 43px;
-      padding-left: 46px;
-      padding-right: 46px;
+      padding-top: rem(43);
+      padding-left: rem(46);
+      padding-right: rem(46);
     }
 
     @media (max-width: $xs-max-width) {
-      padding-top: 43px;
-      padding-left: 26px;
-      padding-right: 26px;
+      padding-top: rem(43);
+      padding-left: rem(26);
+      padding-right: rem(26);
     }
   }
 
@@ -50,22 +50,22 @@
   }
 
   .modal-body {
-    padding-bottom: 63px;
-    padding-left: 66px;
-    padding-right: 66px;
-    padding-top: 40px;
+    padding-bottom: rem(63);
+    padding-left: rem(66);
+    padding-right: rem(66);
+    padding-top: rem(40);
 
     @media (max-width: $sm-max-width) {
-      padding-bottom: 43px;
-      padding-left: 46px;
-      padding-right: 46px;
-      padding-top: 10px;
+      padding-bottom: rem(43);
+      padding-left: rem(46);
+      padding-right: rem(46);
+      padding-top: rem(10);
     }
 
     @media (max-width: $xs-max-width) {
-      padding-top: 23px;
-      padding-left: 26px;
-      padding-right: 26px;
+      padding-top: rem(23);
+      padding-left: rem(26);
+      padding-right: rem(26);
     }
   }
 
@@ -121,15 +121,19 @@
     &::after {
       transform: rotate(-45deg);
     }
+
+    @media(max-width: $xs-max-width) {
+      top: -2px;
+    }
   }
 
   &__text {
     font-size: rem(16);
     line-height: rem(28);
-    margin-bottom: 46px;
+    margin-bottom: rem(46);
 
     @media (max-width: $sm-max-width) {
-      margin-bottom: 26px;
+      margin-bottom: rem(26);
     }
 
     @media(max-width: $xs-max-width) {
@@ -141,14 +145,14 @@
   &__typeLabel {
     display: block;
     font-size: rem(16);
-    margin-bottom: 15px;
+    margin-bottom: rem(15);
   }
 
   &__accountType {
-    margin-bottom: 30px;
+    margin-bottom: rem(30);
 
     @media (max-width: $sm-max-width) {
-      margin-bottom: 15px;
+      margin-bottom: rem(15);
     }
   }
 
@@ -162,7 +166,7 @@
     font-weight: 500;
     font-size: rem(16);
     line-height: rem(40);
-    margin-right: 22px;
+    margin-right: rem(22);
     position: relative;
     transition: color 0.1s ease;
     cursor: pointer;
@@ -188,13 +192,13 @@
   }
 
   .startPopup__email {
-    margin-bottom: 30px;
+    margin-bottom: rem(30);
   }
 
   .startPopup__emailLabel {
     display: block;
     font-size: rem(16);
-    margin-bottom: 15px;
+    margin-bottom: rem(15);
   }
 
   &__emailInput {
@@ -212,7 +216,7 @@
   }
 
   &__emailWarning {
-    margin-top: 12px;
+    margin-top: rem(12);
     display: block;
     color: #f00;
     font-size: rem(14);
@@ -220,7 +224,7 @@
   }
 
   &__submitSuccess {
-    margin-top: 18px;
+    margin-top: rem(18);
     display: block;
     font-weight: 500;
     color: #00b000;

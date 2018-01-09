@@ -2,17 +2,24 @@
   background-color: #371be1;
   color: #fff;
   padding-top: rem(200);
-  padding-bottom: rem(142);
+  // padding-bottom: rem(142);
   overflow: hidden;
+  height: 100%;
+  min-height: 750px;
+  max-height: 1020px;
 
   @media (max-width: $xl-max-width) {
     padding-top: rem(160);
-    padding-bottom: rem(100);
+    // padding-bottom: rem(100);
   }
 
   @media (max-width: $md-max-width) {
     padding-top: rem(140);
     padding-bottom: 420px;
+    overflow: hidden;
+    height: auto;
+    min-height: auto;
+    max-height: auto;
   }
 
   @media(max-width: $sm-max-width) {
@@ -21,6 +28,14 @@
 
   @media(max-width: $xs-max-width) {
     padding-top: rem(90);
+  }
+
+  .container-fluid {
+    height: 100%;
+  }
+
+  .row {
+    height: 100%;
   }
 
   &__title {
@@ -92,7 +107,7 @@
   }
 
   &__startedLink {
-    margin-bottom: rem(120);
+    margin-bottom: rem(45);
 
     @media(max-width: $xl-max-width) {
       font-size: rem(17);
@@ -171,11 +186,11 @@
 
   &__stats {
     position: relative;
-    height: calc(100% + 142px);
+    height: 100%;
     box-sizing: content-box;
 
     @media(max-width: $xl-max-width) {
-      height: calc(100% + 100px);
+      // height: calc(100% + 100px);
     }
 
     @media(max-width: $md-max-width) {
