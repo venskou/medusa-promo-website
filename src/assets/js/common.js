@@ -299,21 +299,7 @@ function animationCalculations() {
         }
     }
     animationInterval = columns[columns.length-1].duration + columns[columns.length-1].delay;
-
-
-
 };
-
-// function animationHiddenCalculations() {
-//     for( var i = 0; i<columns.length; i++ ) {
-//         if(i < 5) {
-//             columns[i].hideTime = columns[i+4].duration + columns[i+4].delay;
-//         } else {
-//             columns[i].hideTime = columns[]
-//         }
-//     }
-// }
-
 
 function startAnimation() {
     columns.forEach(function(column, index) {
@@ -324,6 +310,7 @@ function startAnimation() {
         if(columnTextOpacity < 0.2) {
             columnTextOpacity = 0.2
         }
+
         $(columnElem).velocity({
             top: columnCssTop,
             tween: column.percents
@@ -338,10 +325,14 @@ function startAnimation() {
             },
             complete: function() {
                 setTimeout(function() {
+                    $(columnElem).addClass('fadeout');
+                }, 5000);
+                setTimeout(function() {
                     $(columnElem).css({
                         'top': '100%',
                     });
-                }, 5000);
+                    $(columnElem).removeClass('fadeout');
+                }, 5200);
             }
         });
 
@@ -392,6 +383,26 @@ $(document).ready(function() {
         });
         $(window).scroll(function() {
             var docScroll = $(window).scrollTop();
+            if(docScroll > startAnimationPoint) {
+                $(item).addClass('animate');
+            }
+        })
+    });
+
+    $('.roadmap__item').map(function(index, element) {
+        var item = element;
+        var itemDistance = $(item).offset().top;
+        var viewportHeight = $(window).height();
+        var startAnimationPoint = itemDistance - viewportHeight / 2;
+        $(window).resize(function() {
+            itemDistance = $(item).offset().top;
+            viewportHeight = $(window).height();
+            startAnimationPoint = itemDistance - viewportHeight / 2;
+        });
+
+        $(window).scroll(function() {
+            var docScroll = $(window).scrollTop();
+
             if(docScroll > startAnimationPoint) {
                 $(item).addClass('animate');
             }
