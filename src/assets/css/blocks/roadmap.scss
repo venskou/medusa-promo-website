@@ -122,7 +122,7 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 9px;
+    width: 6px;
     background-color: $blue;
     border-radius: 5px;
     left: 50%;
@@ -315,18 +315,17 @@
   }
 
   &__itemSeparator {
-    width: 10px;
-    // height: 28px;
+    width: 8px;
     overflow: hidden;
     background-color: $white;
     position: absolute;
     top: 0;
     bottom: 0;
+
     span {
-      position: relative;
       display: block;
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       background-color: $blue;
       border-radius: 50%;
       position: absolute;
@@ -338,19 +337,21 @@
       &::after {
         content: '';
         display: block;
-        width: 9px;
-        height: 9px;
+        width: 6px;
+        height: 6px;
         background-color: $blue;
         position: absolute;
         border-radius: 50%;
+        left: 50%;
+        transform: translateX(-50%);
       }
 
       &::before {
-        top: rem(-18);
+        top: rem(-16);
       }
 
       &::after {
-        bottom: rem(-18);
+        bottom: rem(-16);
       }
     }
   }
@@ -365,8 +366,8 @@
     span {
       display: inline-block;
       vertical-align: top;
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       background-color: $purple-light;
       border-radius: 50%;
       position: relative;
