@@ -213,7 +213,7 @@ var one_tenth_time = (duration / 100) / 10;
 
 var columns = [
 {
-    height: 22.8,
+    height: 32.8,
     name: 'btg',
     percents: 280,
     delay: 0,
@@ -221,7 +221,7 @@ var columns = [
     hideTime: 0,
 },
 {
-    height: 31.5,
+    height: 41.5,
     name: 'emc2',
     percents: 640,
     delay: 0,
@@ -229,7 +229,7 @@ var columns = [
     hideTime: 0,
 },
 {
-    height: 64.4,
+    height: 69.4,
     name: 'powr',
     percents: 970,
     delay: 0,
@@ -237,7 +237,7 @@ var columns = [
     hideTime: 0,
 },
 {
-    height: 53.9,
+    height: 61.9,
     name: 'iota',
     percents: 830,
     delay: 0,
@@ -245,7 +245,7 @@ var columns = [
     hideTime: 0,
 },
 {
-    height: 44.4,
+    height: 55.4,
     name: 'xmr',
     percents: 720,
     delay: 0,
@@ -261,7 +261,7 @@ var columns = [
     hideTime: 0,
 },
 {
-    height: 60.0,
+    height: 70.0,
     name: 'neo',
     percents: 940,
     delay: 0,
@@ -269,7 +269,7 @@ var columns = [
     hideTime: 0,
 },
 {
-    height: 31.4,
+    height: 51.4,
     name: 'nxt',
     percents: 670,
     delay: 0,
@@ -302,6 +302,7 @@ function animationCalculations() {
 };
 
 function startAnimation() {
+    var containerHeight = $('.pageHeader__animationWrapper').height()
     columns.forEach(function(column, index) {
         var columnElem = '.pageHeader__statsItem--' + column.name;
         var columnCssTop = 100 - column.height + '%'
@@ -420,26 +421,5 @@ $(document).ready(function() {
             }
         })
     });
-
-    /*
-
-    $(window).scroll(function() {
-        if ($(window).width() > 991) {
-            logoParallax();
-        }
-    })
-
-    $(window).resize(function() {
-        $(window).scroll(function() {
-            if ($(window).width() > 991) {
-                logoParallax();
-            }
-        })
-        if ($(window).width() < 992) {
-            $('.pageHeader__stats').css('top', 'auto');
-        }
-    })
-
-    */
 });
 
