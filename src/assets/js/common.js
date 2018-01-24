@@ -421,6 +421,8 @@ $(document).ready(function() {
         })
     });
 
+    /*
+
     $(window).scroll(function() {
         if ($(window).width() > 991) {
             logoParallax();
@@ -437,5 +439,7 @@ $(document).ready(function() {
             $('.pageHeader__stats').css('top', 'auto');
         }
     })
+
+    */
 });
 
