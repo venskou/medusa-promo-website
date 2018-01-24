@@ -356,6 +356,18 @@ function startAnimation() {
     });
 }
 
+function logoParallax() {
+    var scrolled = $(window).scrollTop();
+    var scrollStats = -(scrolled * 0.87) +'px'
+    var scrollLogo = 'calc(100% - ' + (scrolled * 0.87) +'px)'
+
+    var scrollStatsStr = scrollStats.toString();
+    var scrollLogoStr = scrollLogo.toString();
+
+    $('.pageHeader__stats').css('top', scrollStatsStr);
+    $('.pageHeader__scrollLogo').css('top', scrollLogoStr);
+}
+
 $(document).ready(function() {
     animationCalculations();
     // animationHiddenCalculations()
@@ -408,5 +420,22 @@ $(document).ready(function() {
             }
         })
     });
+
+    $(window).scroll(function() {
+        if ($(window).width() > 991) {
+            logoParallax();
+        }
+    })
+
+    $(window).resize(function() {
+        $(window).scroll(function() {
+            if ($(window).width() > 991) {
+                logoParallax();
+            }
+        })
+        if ($(window).width() < 992) {
+            $('.pageHeader__stats').css('top', 'auto');
+        }
+    })
 });
 
