@@ -15,11 +15,11 @@
 
   @media (max-width: $md-max-width) {
     padding-top: rem(140);
-    padding-bottom: 420px;
+    padding-bottom: 364px;
     overflow: hidden;
     height: auto;
     min-height: auto;
-    max-height: auto;
+    max-height: none;
   }
 
   @media(max-width: $sm-max-width) {
