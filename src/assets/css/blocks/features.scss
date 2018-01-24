@@ -74,9 +74,12 @@
     z-index: 10;
 
     &--rounded {
-      border-bottom-right-radius: 5px;
-      border-bottom-left-radius: 5px;
+      border-radius: 0 0 10px 10px;
       overflow: hidden;
+
+      .features__progressLineFill {
+        border-radius: 0 0 10px 10px;
+      }
     }
   }
 
