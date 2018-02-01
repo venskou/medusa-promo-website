@@ -151,6 +151,10 @@
     .roadmap__item {
       text-align: right;
 
+      @media(max-width: $sm-max-width) {
+        text-align: left;
+      }
+
       &:nth-child(odd) {
         display: none;
 
