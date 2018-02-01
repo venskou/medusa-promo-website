@@ -289,8 +289,7 @@ $(document).ready(function () {
           percents.text('+' + Math.round(tweenValue) + '%')
         },
         complete: function () {
-          var index = indexBuffer.indexOf(spikeIndex);
-          indexBuffer = indexBuffer.splice(index, 1)
+          indexBuffer = indexBuffer.splice(indexBuffer.indexOf(spikeIndex), 1)
           setTimeout(function() {
             element.css({top: '100%'})
           }, 2000)
