@@ -1,0 +1,69 @@
+.person {
+  max-width: rem(264);
+
+  @media (max-width: $sm-max-width) {
+    margin-bottom: rem(20);
+  }
+
+  @media (max-width: 575px) {
+    width: 100%;
+    max-width: none;
+    margin-bottom: rem(30);
+  }
+
+  &__photo {
+    border: 1px solid rgba(#c2c2c2, 0.2);
+    display: inline-block;
+    border-radius: 5px;
+    padding: rem(16);
+    margin-bottom: rem(23);
+
+    @media (max-width: $md-max-width) {
+      padding: rem(12)
+    }
+
+    img {
+      max-width: rem(249);
+      max-height: rem(250);
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__descr {
+    padding-left: rem(16);
+
+    @media (max-width: $md-max-width) {
+      padding-left: rem(12)
+    }
+  }
+
+  &__name {
+    display: block;
+    text-align: left;
+    font-size: rem(21);
+    font-weight: 700;
+    color: $black;
+  }
+
+  &__post {
+    display: block;
+    text-align: left;
+    font-size: rem(18);
+    line-height: rem(32);
+    color: $gray-purple;
+    margin-bottom: rem(15);
+  }
+
+  &__about {
+    p {
+      font-size: rem(14);
+      line-height: rem(24);
+      color: $gray-purple;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

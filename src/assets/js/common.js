@@ -287,23 +287,40 @@ var columns = [
 ]
 
 var maxColumnPercents = 0;
-var animationInterval;
+var animationInterval = 0;
+var generatedColumns = [];
+
+function generateColumns() {
+    while (generatedColumns.length < 4) {
+        var columnNumber = Math.floor(Math.random() * columns.length);
+        console.log(columnNumber)
+        console.log('index of column Number', generatedColumns.indexOf(columnNumber))
+        if (generatedColumns.indexOf(columns[columnNumber]) === -1) {
+            generatedColumns.push(columns[columnNumber]);
+        }
+        console.log('generatedColumns iteration', generatedColumns)
+    }
+}
+
 function animationCalculations() {
-    for( var i = 0; i<columns.length; i++ ) {
-        columns[i].duration = (columns[i].height / 0.1) * one_tenth_time;
-        if (columns[i].percents > maxColumnPercents) {
-            maxColumnPercents = columns[i].percents;
+    for( var i = 0; i<generatedColumns.length; i++ ) {
+        generatedColumns[i].duration = (generatedColumns[i].height / 0.1) * one_tenth_time;
+        if (generatedColumns[i].percents > maxColumnPercents) {
+            maxColumnPercents = generatedColumns[i].percents;
         }
         if (i > 0) {
-            columns[i].delay = columns[i-1].delay + columns[i-1].duration
+            generatedColumns[i].delay = generatedColumns[i-1].delay + generatedColumns[i-1].duration
         }
     }
-    animationInterval = columns[columns.length-1].duration + columns[columns.length-1].delay;
+    animationInterval = generatedColumns[generatedColumns.length-1].duration + generatedColumns[generatedColumns.length-1].delay;
+    savedAnimationInterval = animationInterval;
+    console.log('animation interval', animationInterval)
 };
 
 function startAnimation() {
     var containerHeight = $('.pageHeader__animationWrapper').height()
-    columns.forEach(function(column, index) {
+
+    generatedColumns.forEach(function(column, index) {
         var columnElem = '.pageHeader__statsItem--' + column.name;
         var columnCssTop = 100 - column.height + '%'
         var columnTextOpacity = ((1 / maxColumnPercents) * column.percents).toFixed(1) + '';
@@ -324,16 +341,24 @@ function startAnimation() {
                 .text('+' + Math.round(tweenValue) + '%');
                 return percents;
             },
-            complete: function() {
-                setTimeout(function() {
-                    $(columnElem).addClass('fadeout');
-                }, 5000);
-                setTimeout(function() {
-                    $(columnElem).css({
-                        'top': '100%',
-                    });
-                    $(columnElem).removeClass('fadeout');
-                }, 5200);
+            begin: function() {
+                console.log('index', index)
+                if (index === 0) {
+                    console.log('hop fade out')
+                    setTimeout(function() {
+                        $('.pageHeader__statsItem').each(function() {
+                            $(this).addClass('fadeout');
+                        });
+                    }, animationInterval + 500);
+                    setTimeout(function() {
+                        $('.pageHeader__statsItem').each(function() {
+                            $(this).css({
+                                'top' : '100%'
+                            });
+                            $(this).removeClass('fadeout');
+                        });
+                    }, animationInterval + 1000);
+                }
             }
         });
 
@@ -355,6 +380,10 @@ function startAnimation() {
             queue: false,
         });
     });
+
+    setTimeout(function() {
+        overallAnimation();
+    }, animationInterval + 1700);
 }
 
 function logoParallax() {
@@ -369,15 +398,16 @@ function logoParallax() {
     $('.pageHeader__scrollLogo').css('top', scrollLogoStr);
 }
 
-$(document).ready(function() {
+function overallAnimation() {
+    maxColumnPercents = 0;
+    generatedColumns = [];
+    generateColumns();
     animationCalculations();
-    // animationHiddenCalculations()
-
     startAnimation();
+}
 
-    setInterval(function() {
-        startAnimation();
-    }, animationInterval + 2000);
+$(document).ready(function() {
+    overallAnimation();
 
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('click')
