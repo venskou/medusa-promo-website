@@ -1,0 +1,30 @@
+.ecosystem {
+
+  &__itemNumber {
+    display: inline-block;
+    background-color: $purple-light;
+    width: rem(54);
+    height: rem(54);
+    font-size: rem(22);
+    line-height: 1;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__titleText {
+    display: inline-block;
+    position: relative;
+    padding-left: rem(80);
+  }
+}

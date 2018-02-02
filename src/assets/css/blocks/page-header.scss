@@ -30,6 +30,17 @@
     padding-top: rem(90);
   }
 
+  &--innerPage {
+    min-height: auto;
+    height: 153px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @media(max-width: $md-max-width) {
+      height: 128px;
+    }
+  }
+
   .container-fluid {
     height: 100%;
   }

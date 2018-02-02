@@ -71,16 +71,62 @@ input[type=text], input[type=password], input[type=email], textarea {
 .badge {
   display: inline-block;
   text-transform: uppercase;
-  color: #fff;
-  font-size: rem(11);
-  line-height: rem(11);
-  padding-top: 1px;
-  padding-bottom: 1px;
-  padding-left: 4px;
-  padding-right: 4px;
+  color: $black;
+  font-size: rem(14);
+  line-height: 1;
+  padding-top: rem(5);
+  padding-bottom: rem(5);
+  padding-left: rem(14);
+  padding-right: rem(14);
   vertical-align: top;
-  margin-left: 4px;
-  font-weight: 700;
-  background-color: #2e1440;
-  border-radius: 2px;
+  background-color: $purple-light;
+  border-radius: 4px;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+
+  &--unordered {
+    list-style: none;
+    li {
+      &::before {
+        content: '—';
+      }
+    }
+  }
+
+  &--ordered {
+    padding-left: 15px;
+  }
+
+  li {
+    color: $gray-purple;
+    font-size: rem(16);
+    line-height: rem(36);
+  }
+}
+
+.partition {
+  margin-bottom: rem(60);
+
+  &__title {
+    font-weight: 700;
+    color: $black;
+    font-size: rem(18);
+    line-height: rem(28);
+    text-transform: uppercase;
+    margin-bottom: rem(40);
+  }
+}
+
+.title {
+  margin-bottom: rem(50);
+
+  h3 {
+    color: $black;
+    font-size: rem(22);
+    line-height: rem(18);
+    font-weight: 700;
+  }
 }

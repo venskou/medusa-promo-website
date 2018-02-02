@@ -1,0 +1,40 @@
+.pageDescr {
+  margin-bottom: rem(60);
+
+  &__title {
+    background-color: $purple-light;
+    padding-top: rem(70);
+    padding-bottom: rem(50);
+    margin-bottom: rem(60);
+
+    h2 {
+      color: $black;
+      font-size: rem(42);
+      line-height: rem(50);
+      font-weight: 900;
+    }
+  }
+
+  &__text {
+    color: $gray-purple;
+    margin-bottom: rem(30);
+
+    p {
+      font-size: rem(16);
+      line-height: rem(28);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__badges {
+    font-size: 0;
+  }
+
+  &__badge {
+    margin-bottom: rem(6);
+    margin-right: rem(8);
+  }
+}
