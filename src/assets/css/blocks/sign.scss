@@ -1,0 +1,43 @@
+.sign {
+  margin-bottom: rem(80);
+
+  &__btnWrap {
+    background-color: $white;
+    padding-left: rem(17);
+    padding-right: rem(17);
+  }
+
+  &__btn {
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 700;
+    line-height: 1;
+    font-size: rem(16);
+    text-transform: uppercase;
+    padding-left: rem(64);
+    padding-right: rem(64);
+    padding-top: rem(12);
+    padding-bottom: rem(12);
+    border-radius: 5px;
+    background-color: $purple-light;
+    z-index: 10;
+    &:before {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      height: 1px;
+      left: 0;
+      right: 0;
+      background-color: #e6e5ea;
+    }
+
+    &:active,
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}

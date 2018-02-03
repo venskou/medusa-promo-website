@@ -1,0 +1,25 @@
+.usecases {
+
+  &__item {
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    border-right: 1px solid #e6e5ea;
+
+    @media (max-width: $md-max-width) {
+      border: none;
+    }
+
+    &--unbordered {
+      border: none;
+    }
+  }
+
+  &__itemWrapper {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  &__itemTitle {
+    margin-bottom: rem(20);
+  }
+}

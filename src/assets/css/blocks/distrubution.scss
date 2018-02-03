@@ -1,0 +1,15 @@
+.distrubution {
+  &__table {
+    tr {
+      td {
+        &:nth-child(1) {
+          width: 6%;
+        }
+        &:nth-child(2) {
+          width: 62%;
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.icodate {
+  &__titleBadge {
+    margin-left: rem(15);
+    vertical-align: bottom;
+  }
+
+  &__table {
+    tr {
+      td {
+        &:nth-child(1) {
+          width: 37%;
+        }
+      }
+    }
+  }
+}

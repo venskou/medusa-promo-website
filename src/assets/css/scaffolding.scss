@@ -81,6 +81,26 @@ input[type=text], input[type=password], input[type=email], textarea {
   vertical-align: top;
   background-color: $purple-light;
   border-radius: 4px;
+
+  &--pink {
+    color: $white;
+    background-color: $pink;
+  }
+
+  &--op7 {
+    opacity: 0.7;
+  }
+
+  &--op6 {
+    opacity: 0.6;
+  }
+  &--op5 {
+    opacity: 0.5;
+  }
+  &--op4 {
+    opacity: 0.4;
+  }
+
 }
 
 .list {
@@ -116,7 +136,6 @@ input[type=text], input[type=password], input[type=email], textarea {
     font-size: rem(18);
     line-height: rem(28);
     text-transform: uppercase;
-    margin-bottom: rem(40);
   }
 }
 
@@ -126,7 +145,37 @@ input[type=text], input[type=password], input[type=email], textarea {
   h3 {
     color: $black;
     font-size: rem(22);
-    line-height: rem(18);
-    font-weight: 700;
+    line-height: rem(28);
+    font-weight: 900;
+  }
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.table {
+
+  td {
+    font-size: rem(15);
+    line-height: rem(28);
+  }
+
+  &--unborderedTop {
+    tr, th {
+      &:first-child {
+        td {
+          border: none;
+        }
+      }
+    }
+  }
+
+  &__data {
+
+    &--bold {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
   }
 }
