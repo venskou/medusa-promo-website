@@ -1,7 +1,9 @@
 .bonus {
 
   &__table {
-    tr  {
+    min-width: 540px;
+
+    tr {
       td {
         &:not(:first-child) {
           text-align: center;

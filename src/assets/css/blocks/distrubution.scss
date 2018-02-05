@@ -1,4 +1,17 @@
 .distrubution {
+
+  .col-lg-6 {
+    .distrubution__table {
+      margin-bottom: rem(50);
+    }
+
+    &:last-child {
+      .distrubution__table {
+        margin-bottom: 0;
+      }
+    }
+  }
+
   &__table {
     tr {
       td {

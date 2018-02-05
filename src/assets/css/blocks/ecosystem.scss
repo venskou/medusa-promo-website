@@ -1,4 +1,15 @@
 .ecosystem {
+  .col-md-6 {
+    &:last-child {
+      .ecosystem__item {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(50);
+  }
 
   &__item {
     @media (max-width: $md-max-width) {

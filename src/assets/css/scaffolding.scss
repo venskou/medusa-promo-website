@@ -142,6 +142,10 @@ input[type=text], input[type=password], input[type=email], textarea {
 .title {
   margin-bottom: rem(50);
 
+  @media(max-width: $md-max-width) {
+    margin-bottom: rem(30);
+  }
+
   h3 {
     color: $black;
     font-size: rem(22);
