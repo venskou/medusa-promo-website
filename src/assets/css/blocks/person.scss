@@ -1,5 +1,6 @@
 .person {
   max-width: rem(264);
+  padding-bottom: rem(50);
 
   @media (max-width: $sm-max-width) {
     margin-bottom: rem(20);
@@ -12,9 +13,9 @@
   }
 
   &__photo {
-    border: 1px solid rgba(#c2c2c2, 0.2);
+    border: 5px solid $blue;
     display: inline-block;
-    border-radius: 5px;
+    border-radius: 500px;
     padding: rem(16);
     margin-bottom: rem(23);
 
@@ -27,6 +28,7 @@
       max-height: rem(250);
       width: 100%;
       height: auto;
+      border-radius: 500px;
     }
   }
 
@@ -49,10 +51,11 @@
   &__post {
     display: block;
     text-align: left;
-    font-size: rem(18);
+    font-size: rem(16);
     line-height: rem(32);
     color: $gray-purple;
     margin-bottom: rem(15);
+    font-weight: bold;
   }
 
   &__about {

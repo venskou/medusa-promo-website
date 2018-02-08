@@ -1,5 +1,8 @@
 .featuresDescr {
-  padding-top: rem(100);
+  padding-top: rem(30);
+  padding-bottom: rem(60);
+  position: relative;
+  z-index: 30;
 
   @media(max-width: $xl-max-width) {
     padding-top:rem(80);
@@ -18,19 +21,24 @@
   }
 
   &__item {
-    padding-right: rem(70);
     margin-bottom: rem(50);
-
-    @media (max-width: $xl-max-width) {
-      padding-right: rem(50);
+    &--left {
+      padding-right: 20px;
+      @media (max-width: $xl-max-width) {
+        padding-right: 10px;
+      }
+      @media (max-width: $md-max-width) {
+        padding-left: 0;
+      }
     }
-
-    @media (max-width: $md-max-width) {
-      padding-right: rem(30);
-    }
-
-    @media(max-width: $sm-max-width) {
-      padding-right: 0;
+    &--right {
+      padding-left: 20px;
+      @media (max-width: $xl-max-width) {
+        padding-left: 10px;
+      }
+      @media (max-width: $md-max-width) {
+        padding-left: 0;
+      }
     }
   }
 
@@ -47,7 +55,6 @@
   }
 
   &__itemText {
-    text-align: justify;
     p {
       color: $gray-purple;
       font-size: rem(16);

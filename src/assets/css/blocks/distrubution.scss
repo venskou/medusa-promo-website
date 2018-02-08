@@ -1,13 +1,9 @@
 .distrubution {
 
-  .col-lg-6 {
-    .distrubution__table {
-      margin-bottom: rem(50);
-    }
-
-    &:last-child {
+  .col-lg-6:first-child {
+    @media (max-width: $md-max-width) {
       .distrubution__table {
-        margin-bottom: 0;
+        margin-bottom: rem(50);
       }
     }
   }

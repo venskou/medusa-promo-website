@@ -1,0 +1,49 @@
+<div class="startPopup modal fade" id="start-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div id="loader-backdrop" class="startPopup__backdrop" style="display: none;">
+        <div class="startPopup__loader"></div>
+      </div>
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Send request</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="startPopup__closeBtn" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="#" class="startPopup__form">
+          <div class="startPopup__accountType">
+            <span class="startPopup__typeLabel">Account type</span>
+            <div class="startPopup__accountChoose">
+              <input type="radio" id="personal-account" class="startPopup__accountRadio" name="account" checked>
+              <label class="startPopup__accountLabel" for="personal-account">Personal</label>
+              <input type="radio" id="company-account" class="startPopup__accountRadio" name="account">
+              <label class="startPopup__accountLabel" for="company-account">Company</label>
+            </div>
+          </div>
+          <div class="startPopup__email">
+            <label class="startPopup__emailLabel" for="popup-email">Email</label>
+            <input type="email" class="startPopup__emailInput" id="popup-email">
+            <span class="startPopup__emailWarning" style="display: none;">Please enter valid email</span>
+          </div>
+          <div class="startPopup__email">
+            <label class="startPopup__emailLabel" for="popup-country">Country</label>
+            <input class="startPopup__emailInput" id="popup-country">
+            <span class="startPopup__emailWarning" style="display: none;">Please enter valid country</span>
+          </div>
+          <div class="startPopup__email">
+            <label class="startPopup__emailLabel" for="popup-name">Name</label>
+            <input class="startPopup__emailInput" id="popup-name">
+            <span class="startPopup__emailWarning" style="display: none;">Please enter valid name</span>
+          </div>
+          <br/>
+          <div class="startPopup__submit">
+            <button class="startPopup__submitBtn btn btn--blue">Send</button>
+            <span class="startPopup__submitSuccess" style="display: none;">Request was successfully sent</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

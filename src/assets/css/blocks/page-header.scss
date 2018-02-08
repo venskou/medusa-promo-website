@@ -60,11 +60,6 @@
       letter-spacing: 0.4px;
       margin-bottom: 0;
 
-      @media (max-width: $xl-max-width) {
-        font-size: rem(38);
-        line-height: rem(53);
-      }
-
       @media (max-width: $md-max-width) {
         font-size: rem(45);
         line-height: rem(60);

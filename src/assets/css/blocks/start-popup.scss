@@ -16,7 +16,8 @@
   padding-right: rem(17);
 
   .modal-dialog {
-    max-width: 697px;
+    max-width: 597px;
+    width: 100%;
     margin: auto;
   }
 
@@ -206,13 +207,9 @@
     border: 1px solid #d1d1d1;
     border-radius: 5px;
     display: block;
-    width: 82%;
+    width: 100%;
     font-size: rem(16);
     padding: 9px 11px 7px;
-
-    @media(max-width: $xs-max-width) {
-      width: 100%;
-    }
   }
 
   &__emailWarning {

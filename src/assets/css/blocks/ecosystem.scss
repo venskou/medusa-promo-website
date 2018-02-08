@@ -17,6 +17,13 @@
     }
   }
 
+  &__list {
+    padding-left: 0;
+    li {
+      list-style: none;
+    }
+  }
+
   &__itemNumber {
     display: inline-block;
     background-color: $purple-light;

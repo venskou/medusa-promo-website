@@ -183,3 +183,72 @@ input[type=text], input[type=password], input[type=email], textarea {
     }
   }
 }
+
+.ct-label {
+  font-size: 14px !important;
+  font-weight: bold;
+  fill: #fff !important;
+}
+
+.ct-chart, .ct-chart-2 {
+  height: 340px;
+  padding-top: 90px;
+
+  @media (max-width: $md-max-width) {
+    padding-top: 10px;
+  }
+}
+
+.ct-series-a .ct-slice-donut-solid {
+  fill: #371be1 !important;
+}
+.ct-series-b .ct-slice-donut-solid {
+  fill: #f3cb0b !important;
+}
+.ct-series-c .ct-slice-donut-solid {
+  fill: #b8bcc1 !important;
+}
+.ct-series-d .ct-slice-donut-solid {
+  fill: #7c9797 !important;
+}
+.ct-series-e .ct-slice-donut-solid {
+  fill: #486f97 !important;
+}
+.ct-series-f .ct-slice-donut-solid {
+  fill: #f6a613 !important;
+}
+
+.bg-a {
+  background: #371be1 !important;
+}
+
+.bg-b {
+  background: #f3cb0b !important;
+}
+
+.bg-c {
+  background: #b8bcc1 !important;
+}
+
+.bg-d {
+  background: #7c9797 !important;
+}
+
+.bg-e {
+  background: #486f97 !important;
+}
+
+.bg-f {
+  background: #f6a613 !important;
+}
+
+.chart-label {
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  background: $gray;
+  border-radius: 3px;
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
