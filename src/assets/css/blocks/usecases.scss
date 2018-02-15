@@ -1,6 +1,10 @@
 .usecases {
   margin-bottom: 120px;
 
+  &__icons {
+    padding: rem(30);
+  }
+
   &__item {
     padding-top: rem(20);
     padding-bottom: rem(20);
@@ -8,10 +12,15 @@
 
     @media (max-width: $sm-max-width) {
       border: none;
+      margin-bottom: rem(30);
     }
 
     &--unbordered {
       border: none;
+    }
+
+    &--icons {
+      padding: 0 rem(20) 0 0;
     }
   }
 

@@ -165,7 +165,7 @@
 
       &:nth-child(even) {
         .roadmap__itemNameWrap {
-          padding-left: 100px;
+          padding-left: 20px;
 
           @media(max-width: $xl-max-width) {
             padding-left: 0;
@@ -173,7 +173,7 @@
         }
 
         .roadmap__itemDescr {
-          padding-left: 100px;
+          padding-left: 20px;
 
           @media(max-width: $xl-max-width) {
             padding-left: 0px;

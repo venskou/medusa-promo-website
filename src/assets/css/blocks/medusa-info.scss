@@ -1,3 +1,11 @@
 .medusaInfo {
   margin-bottom: rem(100);
+
+  &__logo {
+
+    @media (max-width: $md-max-width) {
+      padding-bottom: rem(80);
+      text-align: center;
+    }
+  }
 }

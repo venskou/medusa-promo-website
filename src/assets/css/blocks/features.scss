@@ -184,9 +184,14 @@
     }
 
     &::before {
-      content: '—';
+      content: "";
       position: absolute;
-      left: 0;
+      left: 7px;
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: url(../../assets/img/bullet-icon.jpg) no-repeat 0 5px;
+      background-size: 50%;
     }
   }
 }
