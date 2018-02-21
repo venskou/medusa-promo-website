@@ -13,11 +13,14 @@
   <meta name="theme-color" content="#ffffff">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../../assets/vendors/bootstrap-4.0.0-beta.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/vendors/smartwizard/dist/css/smart_wizard.min.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
   <script src="../../assets/vendors/jquery/dist/jquery.min.js"></script>
   <script src="../../assets/vendors/popper.js/dist/umd/popper.min.js"></script>
   <script src="../../assets/vendors/bootstrap-4.0.0-beta.2/js/bootstrap.min.js"></script>
   <script src="../../assets/vendors/velocity/velocity.min.js"></script>
+  <script src="../../assets/vendors/smartwizard/dist/js/jquery.smartWizard.js"></script>
+  <script src="../../assets/vendors/jquery.countdown/dist/jquery.countdown.min.js"></script>
   <script src="../../assets/js/common.js"></script>
 </head>
 <body>
@@ -36,7 +39,6 @@
     </div>
   </div>
 </section>
-
 <section class="medusaInfo partition">
   <div class="container-fluid">
     <div class="row">
@@ -131,6 +133,172 @@
           <a href="#" class="sign__btn" data-toggle="modal" data-target="#start-modal">
             Sign Up
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="registration">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="registration__wrapper">
+          <div class="registration__title">
+            <h2>Registration Form</h2>
+          </div>
+          <div class="registration__steps" id="smartwizard">
+            <ul class="registration__stepsList">
+              <li class="registration__stepsItem">
+                <a href="#step-1" class="registration__stepsLink registration__stepsLink--first">
+                  <span>Step 1</span>
+                  <span>Personal Information</span>
+                </a>
+              </li>
+              <li class="registration__stepsItem">
+                <a href="#step-2" class="registration__stepsLink">
+                  <span>Step 2</span>
+                  <span>Purchase Details</span>
+                </a>
+              </li>
+              <li class="registration__stepsItem">
+                <a href="#step-3" class="registration__stepsLink">
+                  <span>Step 3</span>
+                  <span>Verification</span>
+                </a>
+              </li>
+            </ul>
+            <div class="registration__stepsData">
+              <div id="step-1" class="registration__stepContentWrapper">
+                <div class="row justify-content-between">
+                  <div class="col-lg-6">
+                    <div class="registration__stepPartitionTitle">
+                      Personal Information
+                    </div>
+                    <form class="registration__form">
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="reg-email">Email</label>
+                        <input type="email" class="startPopup__emailInput" id="reg-email">
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="reg-country">Country</label>
+                        <input type="text" class="startPopup__emailInput" id="reg-country">
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="reg-email">Name</label>
+                        <input type="text" class="startPopup__emailInput" id="reg-name">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="registration__stepPartitionTitle">
+                      How To Get 50% OFF Now on Medusa Coins
+                    </div>
+                    <div class="registration__stepText">
+                      <p>
+                        We understand and appreciate that trading in high volume, particularly in the crypto world, is a different proposition altogether. That is why Medusa offers our members the ability to execute their transactions live over the phone as well as put together custom deals with ICOs as required.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="step-2" class="registration__stepContentWrapper">
+                <div class="row justify-content-between">
+                  <div class="col-lg-6">
+                    <div class="registration__stepPartitionTitle">
+                      Personal Information
+                    </div>
+                    <form class="registration__form">
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="reg-email">Email</label>
+                        <input type="email" class="startPopup__emailInput" id="reg-email">
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="reg-country">Country</label>
+                        <input type="text" class="startPopup__emailInput" id="reg-country">
+                      </div>
+
+                    </form>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="registration__stepPartitionTitle">
+                      How To Get 50% OFF Now on Medusa Coins
+                    </div>
+                    <div class="registration__stepText">
+                      <p>
+                        We understand and appreciate that trading in high volume, particularly in the crypto world, is a different proposition altogether. That is why Medusa offers our members the ability to execute their transactions live over the phone as well as put together custom deals with ICOs as required.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="step-3" class="registration__stepContentWrapper">
+                <div class="row justify-content-between">
+                  <div class="col-lg-6">
+                    <div class="registration__stepPartitionTitle">
+                      Personal Information
+                    </div>
+                    <form class="registration__form">
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="reg-email">Email</label>
+                        <input type="email" class="startPopup__emailInput" id="reg-email">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="registration__stepPartitionTitle">
+                      How To Get 50% OFF Now on Medusa Coins
+                    </div>
+                    <div class="registration__stepText">
+                      <p>
+                        We understand and appreciate that trading in high volume, particularly in the crypto world, is a different proposition altogether.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="counter">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="counter__title">
+          <h2>
+            Join today
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="counter__wrapper" id="counter">
+        <div class="counter__item">
+          <div class="counter__value">
+            <span class="counter__valueText counter__valueText--days"></span>
+          </div>
+          <span class="counter__itemName">Days</span>
+        </div>
+        <div class="counter__item">
+          <div class="counter__value">
+            <span class="counter__valueText counter__valueText--hours"></span>
+          </div>
+          <span class="counter__itemName">Hours</span>
+        </div>
+        <div class="counter__item">
+          <div class="counter__value">
+            <span class="counter__valueText counter__valueText--minutes"></span>
+          </div>
+          <span class="counter__itemName">Minutes</span>
+        </div>
+        <div class="counter__item">
+          <div class="counter__value">
+            <span class="counter__valueText counter__valueText--seconds"></span>
+          </div>
+          <span class="counter__itemName">Seconds</span>
         </div>
       </div>
     </div>
