@@ -208,12 +208,20 @@
         font-size: rem(18);
         line-height: rem(28);
       }
+    }
+  }
 
-      &:nth-child(2) {
-        display: block;
-        font-size: rem(17);
-        line-height: rem(21);
-      }
+  &__stepsDescr {
+    display: block;
+    font-size: rem(17);
+    line-height: rem(21);
+
+    @media(max-width: $xl-max-width) {
+      display: none;
+    }
+
+    @media(max-width: $xs-max-width) {
+      display: block;
     }
   }
 
@@ -268,16 +276,76 @@
     color: rgba($black, 0.7);
     font-size: rem(15);
     line-height: rem(31);
+
+    a {
+      color: $blue;
+    }
   }
 
   &__formRow {
     margin-bottom: rem(31);
+
+    .startPopup__emailInput {
+
+      &[disabled] {
+        background-color: darken($white, 7);
+      }
+
+    }
   }
 
   &__inputLabel {
     font-size: rem(15);
-    line-height: rem(18);
+    line-height: rem(24);
     display: inline-block;
     vertical-align: top;
+  }
+
+  &__select {
+    display: block;
+    border: none;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    font-size: rem(16);
+    padding: 10px 13px 8px;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  &__btnCheckbox {
+    background-color: #ded9e9;
+    color: $black;
+    font-size: rem(16);
+
+    &:hover {
+      z-index: 1 !important;
+    }
+
+    &.active {
+      background-color: $blue;
+      color: $white;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  &__inputGroupBtn {
+    background-color: #ded9e9;
+    display: inline-block;
+    vertical-align: top;
+    color: $black;
+    font-size: rem(16);
+    line-height: rem(24);
+    border-radius: 0;
+    padding: 10px 21px 8px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
   }
 }
