@@ -400,4 +400,20 @@ $(document).ready(function () {
     autoHide: true,
     weekStart: 1
   });
+
+  $('.registration__btnCheckbox--currency').on('click', function() {
+    var selectedCurrency = $(this).children('input[name="currency"]').attr('id').toUpperCase()
+    // var blockSelector = "div[data-coin=" + selectedCurrency + "]"
+    $('div[data-coin]').each(function() {
+      if($(this).data('coin') === selectedCurrency) {
+        $(this).css({
+          'display' : 'block'
+        })
+      } else {
+        $(this).css({
+          'display' : 'none'
+        })
+      }
+    })
+  })
 })
