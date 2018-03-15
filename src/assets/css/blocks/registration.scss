@@ -284,6 +284,7 @@
 
   &__formRow {
     margin-bottom: rem(31);
+    position: relative;
 
     .startPopup__emailInput {
 
@@ -297,8 +298,7 @@
   &__inputLabel {
     font-size: rem(15);
     line-height: rem(24);
-    display: inline-block;
-    vertical-align: top;
+    display: block;
   }
 
   &__select {

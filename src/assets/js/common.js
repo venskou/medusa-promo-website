@@ -395,4 +395,9 @@ $(document).ready(function () {
       }
     });
   });
+
+  $('[data-toggle="datepicker"]').datepicker({
+    autoHide: true,
+    weekStart: 1
+  });
 })

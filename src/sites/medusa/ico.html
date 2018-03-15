@@ -16,12 +16,14 @@
   <link rel="stylesheet" type="text/css" href="../../assets/vendors/smartwizard/dist/css/smart_wizard.min.css">
   <link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
   <link rel="stylesheet" type="text/css" href="../../assets/vendors/chartist-js/chartist.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/vendors/datepicker/dist/datepicker.min.css">
   <script src="../../assets/vendors/jquery/dist/jquery.min.js"></script>
   <script src="../../assets/vendors/popper.js/dist/umd/popper.min.js"></script>
   <script src="../../assets/vendors/bootstrap-4.0.0-beta.2/js/bootstrap.min.js"></script>
   <script src="../../assets/vendors/velocity/velocity.min.js"></script>
   <script src="../../assets/vendors/chartist-js/chartist.js"></script>
   <script src="../../assets/vendors/smartwizard/dist/js/jquery.smartWizard.js"></script>
+  <script src="../../assets/vendors/datepicker/dist/datepicker.min.js"></script>
   <script src="../../assets/js/common.js"></script>
 </head>
 <body>
@@ -40,7 +42,6 @@
     </div>
   </div>
 </section>
-
 <section class="registration">
   <div class="container-fluid">
     <div class="row">
@@ -98,7 +99,7 @@
                       </div>
                       <div class="registration__formRow">
                         <label class="registration__inputLabel" for="regDob">Date of Birth</label>
-                        <input type="date" class="startPopup__emailInput" id="regDob">
+                        <input type="text" data-toggle="datepicker" class="form-control startPopup__emailInput" id="regDob">
                       </div>
                       <div class="registration__formRow">
                         <label class="registration__inputLabel" for="nationality">Nationality</label>
