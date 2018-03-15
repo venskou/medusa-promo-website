@@ -301,17 +301,21 @@
     display: block;
   }
 
+  &__selectWrapper {
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    padding: 10px 13px 8px;
+  }
+
   &__select {
     display: block;
     border: none;
     width: 100%;
     background-color: #fff;
-    border: 1px solid #d1d1d1;
-    border-radius: 5px;
+
     display: block;
     width: 100%;
     font-size: rem(16);
-    padding: 10px 13px 8px;
 
     &:focus {
       box-shadow: none;

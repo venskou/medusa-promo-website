@@ -252,3 +252,12 @@ input[type=text], input[type=password], input[type=email], textarea {
   position: relative;
   top: 2px;
 }
+
+div.datepicker-top-left,
+div.datepicker-top-right {
+    border-top-color: $blue;
+
+    &::before {
+          border-bottom-color: $blue;
+    }
+}
