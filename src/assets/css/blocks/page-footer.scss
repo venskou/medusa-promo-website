@@ -9,6 +9,17 @@
 
   &__nav {
     margin-bottom: rem(25);
+
+    &--horizontal {
+      margin-bottom: rem(8);
+
+      .pageFooter__navList {
+        li {
+          display: inline-block;
+          margin-right: rem(30);
+        }
+      }
+    }
   }
 
   &__navTitle {
@@ -30,6 +41,8 @@
     @media(max-width: $xs-max-width) {
       margin-bottom: rem(30);
     }
+
+
   }
 
   &__navItem {
@@ -142,11 +155,12 @@
 
     @media(max-width: $sm-max-width) {
       text-align: left;
+      margin-top: rem(20);
     }
 
     @media(max-width: 575px) {
       text-align: left;
-      margin-top: 15px;
+      margin-top: 7px;
       margin-bottom: 0;
     }
   }

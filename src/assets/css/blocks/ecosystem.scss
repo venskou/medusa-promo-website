@@ -1,4 +1,6 @@
 .ecosystem {
+  margin-bottom: rem(110);
+
   .col-md-6 {
     &:last-child {
       .ecosystem__item {
@@ -9,9 +11,20 @@
 
   &__title {
     margin-bottom: rem(50);
+
+    h2 {
+      text-align: center;
+      color: $black;
+      font-weight: 800;
+      font-size: 2.57143rem;
+      line-height: 3.57143rem;
+      margin-bottom: rem(80);
+    }
   }
 
   &__item {
+    text-align: center;
+
     @media (max-width: $md-max-width) {
       margin-bottom: rem(35);
     }

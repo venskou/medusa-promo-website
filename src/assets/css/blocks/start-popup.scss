@@ -15,6 +15,11 @@
   padding-left: rem(17);
   padding-right: rem(17);
 
+  &__description {
+    margin-bottom: rem(30);
+    line-height: 2;
+  }
+
   .modal-dialog {
     max-width: 597px;
     width: 100%;
@@ -54,7 +59,7 @@
     padding-bottom: rem(63);
     padding-left: rem(66);
     padding-right: rem(66);
-    padding-top: rem(40);
+    padding-top: rem(10);
 
     @media (max-width: $sm-max-width) {
       padding-bottom: rem(43);

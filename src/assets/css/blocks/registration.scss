@@ -41,7 +41,15 @@
     overflow: hidden;
     background-color: $white;
 
-    .navbar  {
+    .nav-tabs .nav-link {
+      border-radius: 0 !important;
+    }
+
+    .btn-toolbar.justify-content-end {
+      justify-content: center !important;
+    }
+
+    .btn-toolbar  {
       padding-top: rem(60);
       padding-bottom: rem(45);
       justify-content: center;
@@ -72,8 +80,8 @@
         padding-right: rem(54);
         background-color: $purple-pale;
         border-radius: 5spx;
-        padding-top: rem(8);
-        padding-bottom: rem(8);
+        padding-top: rem(18);
+        padding-bottom: rem(18);
         margin-right: rem(20);
 
         @media(max-width: $xs-max-width) {
@@ -270,6 +278,11 @@
     line-height: rem(27);
     font-weight: 700;
     margin-bottom: rem(25);
+
+    &--thankYou {
+      font-size: 28px;
+      margin: 40px 0px;
+    }
   }
 
   &__stepText {

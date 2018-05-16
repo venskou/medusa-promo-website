@@ -1,7 +1,7 @@
 .pageHeader {
   background-color: #371be1;
   color: #fff;
-  padding-top: rem(200);
+  padding-top: rem(170);
   // padding-bottom: rem(142);
   // overflow: hidden;
   height: 100%;
@@ -93,6 +93,7 @@
     height: 100%;
     overflow-y: hidden;
     position: relative;
+    max-width: 570px;
 
     @media(max-width: $md-max-width) {
       height: auto;
@@ -103,6 +104,7 @@
 
   &__promoDescr {
     margin-bottom: rem(60);
+    max-width: 500px;
     p {
       margin-bottom: 0;
       opacity: 0.5;

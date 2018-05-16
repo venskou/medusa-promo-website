@@ -1,5 +1,9 @@
 .usecases {
-  margin-bottom: 120px;
+  margin-bottom: 90px;
+
+  @media (max-width: $md-max-width) {
+    margin-bottom: 60px;
+  }
 
   &__icons {
     padding: rem(30);
