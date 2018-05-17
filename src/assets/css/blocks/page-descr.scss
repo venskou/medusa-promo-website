@@ -12,6 +12,11 @@
       font-size: rem(42);
       line-height: rem(50);
       font-weight: 900;
+
+      @media (max-width: $md-max-width) {
+        font-size: rem(32);
+        line-height: rem(38);
+      }
     }
   }
 

@@ -4,6 +4,7 @@
 
   @media (max-width: $sm-max-width) {
     margin-bottom: rem(20);
+    text-align: center;
   }
 
   @media (max-width: 575px) {
@@ -46,6 +47,10 @@
     font-size: rem(21);
     font-weight: 700;
     color: $black;
+
+    @media(max-width: $sm-max-width) {
+      text-align: center;
+    }
   }
 
   &__post {
@@ -56,6 +61,10 @@
     color: $gray-purple;
     margin-bottom: rem(15);
     font-weight: bold;
+
+    @media(max-width: $sm-max-width) {
+      text-align: center;
+    }
   }
 
   &__about {
