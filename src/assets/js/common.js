@@ -407,7 +407,7 @@ $(document).ready(function () {
     $('div[data-coin]').each(function() {
       if($(this).data('coin') === selectedCurrency) {
         $(this).css({
-          'display' : 'block'
+          'display' : 'flex'
         })
       } else {
         $(this).css({
