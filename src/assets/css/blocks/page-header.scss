@@ -53,18 +53,18 @@
   }
 
   &__title {
-    margin-top: rem(36);
+    margin-top: rem(50);
     margin-bottom: rem(30);
 
     h1 {
       font-weight: 700;
-      font-size: rem(45);
+      font-size: rem(39);
       line-height: rem(60);
       letter-spacing: 0.4px;
       margin-bottom: 0;
 
       @media (max-width: $md-max-width) {
-        font-size: rem(45);
+        font-size: rem(39);
         line-height: rem(60);
       }
 
@@ -112,7 +112,6 @@
   &__promo {
     height: 100%;
     position: relative;
-    max-width: 570px;
 
     @media(max-width: $md-max-width) {
       height: auto;
