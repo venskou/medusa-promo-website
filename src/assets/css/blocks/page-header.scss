@@ -1,7 +1,7 @@
 .pageHeader {
   background-color: #371be1;
   color: #fff;
-  padding-top: rem(170);
+  padding-top: rem(120);
   // padding-bottom: rem(142);
   // overflow: hidden;
   height: 100%;
@@ -10,6 +10,8 @@
 
   @media (max-width: $xl-max-width) {
     padding-top: rem(160);
+    min-height: 770px;
+    max-height: 770px;
     // padding-bottom: rem(100);
   }
 
@@ -52,7 +54,7 @@
 
   &__title {
     margin-top: rem(36);
-    margin-bottom: rem(38);
+    margin-bottom: rem(30);
 
     h1 {
       font-weight: 700;
@@ -90,6 +92,23 @@
     }
   }
 
+  &__mark {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: rem(18);
+    display: block;
+    margin-bottom: rem(10);
+
+    &--bottom {
+      margin-top: rem(13);
+      margin-bottom: rem(30);
+
+      @media(max-width: $xl-max-width) {
+        margin-bottom: rem(17);
+      }
+    }
+  }
+
   &__promo {
     height: 100%;
     position: relative;
@@ -102,26 +121,56 @@
   }
 
   &__promoDescr {
-    margin-bottom: rem(60);
-    max-width: 500px;
-    p {
-      margin-bottom: 0;
-      opacity: 0.8;
-      font-size: rem(27);
-      line-height: rem(39);
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-      @media(max-width: $xl-max-width) {
-        font-size: rem(21);
-        line-height: rem(33);
-      }
-    }
+    // max-width: 500px;
 
-    @media(max-width: $xl-max-width) {
-      margin-bottom: rem(50);
-    }
+    // p {
+    //   margin-bottom: 0;
+    //   opacity: 0.8;
+    //   font-size: rem(27);
+    //   line-height: rem(39);
+
+    //   @media(max-width: $xl-max-width) {
+    //     font-size: rem(21);
+    //     line-height: rem(33);
+    //   }
+    // }
+
+    // @media(max-width: $xl-max-width) {
+    //   margin-bottom: rem(50);
+    // }
 
     @media(max-width: $sm-max-width) {
       margin-bottom: rem(40);
+    }
+  }
+
+  &__promoDescrItem {
+    text-transform: uppercase;
+    font-size: rem(18);
+    line-height: rem(35);
+    padding-left: 26px;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 21px;
+      position: absolute;
+      top: rem(5);
+      left: 0;
+      background-image: url(../../assets/img/whitebullet.jpg);
+      background-repeat: no-repeat;
+      background-size: 16px 21px;
+
+      @media(max-width: $xl-max-width) {
+        top: rem(2);
+      }
     }
   }
 
