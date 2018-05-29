@@ -256,11 +256,6 @@ var spikes = [
 ]
 
 $(document).ready(function () {
-
-  function getRandomArbitrary (min, max) {
-    return Math.floor(Math.random() * (max - min)) + min
-  }
-
   (function generateSpikes () {
     spikes.forEach(function (item, index) {
       var element = '<span class="pageHeader__statsItem pageHeader__statsItem--' + item.name + ' index-' + index + '"><span class="pageHeader__statsItemName">' + item.name + '</span><span class="pageHeader__statsItemPercents"></span></span>'
@@ -268,34 +263,106 @@ $(document).ready(function () {
     })
   })();
 
+(function() {
+  var lastTime = 0;
+  var vendors = ['ms', 'moz', 'webkit', 'o'];
+  for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+      window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
+      window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+                                  || window[vendors[x]+'CancelRequestAnimationFrame'];
+  }
+
+  if (!window.requestAnimationFrame)
+      window.requestAnimationFrame = function(callback, element) {
+          var currTime = new Date().getTime();
+          var timeToCall = Math.max(0, 16 - (currTime - lastTime));
+          var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+            timeToCall);
+          lastTime = currTime + timeToCall;
+          return id;
+      };
+
+  if (!window.cancelAnimationFrame)
+      window.cancelAnimationFrame = function(id) {
+          clearTimeout(id);
+      };
+}());
+
   (function animateSpikes () {
-    var indexBuffer = []
-    setInterval(function() {
-      var spikeIndex = getRandomArbitrary(0, spikes.length)
-      var spike = spikes[spikeIndex]
-      var element = $('.pageHeader__statsItem.index-' + spikeIndex)
-      var percents = $('.pageHeader__statsItem.index-' + spikeIndex + ' .pageHeader__statsItemPercents')
-      if (indexBuffer.indexOf(spikeIndex) >= 0) {
-        return;
-      }
-      indexBuffer.push(spikeIndex)
-      element.velocity({
-        top: 100 - spike.height + '%',
-        tween: spike.percents
-      }, {
-        easing: 'ease-in-out',
-        duration: 1500,
-        progress: function (elements, complete, remaining, start, tweenValue) {
-          percents.text('+' + Math.round(tweenValue) + '%')
-        },
-        complete: function () {
-          indexBuffer = indexBuffer.splice(indexBuffer.indexOf(spikeIndex), 1)
-          setTimeout(function() {
-            element.css({top: '100%'})
-          }, 2000)
+    var indexBuffer = [];
+    var spikesLimit = 5;
+
+    (function next() {
+      requestAnimationFrame(function(){ 
+        var input = [];
+        for (var i = 0; i < spikes.length; i++) {
+          if (indexBuffer.indexOf(i) < 0 && indexBuffer.indexOf(i - 1) < 0 && indexBuffer.indexOf(i + 1) < 0) {
+            input.push(i);
+          }
         }
-      })
-    }, 750)
+        if (input.length) {
+          input = input.sort(function(){
+            return (0.5 - Math.random());
+          });
+        }
+        var index = (input.length) ? input[(Math.random() * input.length) | 0] : (Math.random() * spikes.length) | 0;
+        var spike = spikes[index];
+        var $element = $('.pageHeader__statsItem.index-' + index);
+        var $percents = $element.find('.pageHeader__statsItemPercents');
+        if (indexBuffer.indexOf(index) >= 0) {
+          return next();
+        }
+
+        indexBuffer.push(index);
+        $element.css({
+          zIndex: 1024
+        }).velocity({
+          top: 100 - spike.height + '%',
+          tween: spike.percents
+        }, {
+          easing: 'ease-in-out',
+          duration: Math.random() * 1000 + 1000,
+          progress: function (elements, complete, remaining, start, tweenValue) {
+            $percents.text('+' + Math.round(tweenValue) + '%');
+          },
+          complete: function(){
+            var indexes = indexBuffer.filter(function(entry){
+              return (entry === index + 1)
+                  || (entry === index - 1);
+            });
+
+            if (indexes.length < 1 && indexBuffer.length > spikesLimit) {
+              indexes = indexBuffer.splice(0, 1);
+            }
+
+            indexBuffer = indexBuffer.filter(function(entry){
+              return indexes.indexOf(entry) === -1;
+            });
+
+            var $elements = $(indexes.map(function(index){
+              return '.pageHeader__statsItem.index-' + index;
+            }).join(','));
+
+            var n = indexes.length;
+
+            if (n > 0) {
+              $elements.fadeOut(200, function(){
+                $elements.css({
+                  top: '',
+                  opacity: 1
+                }).show();
+
+                if (!--n) {
+                  next();
+                }
+              });
+            } else {
+              next();
+            }
+          }
+        });
+      });
+    })();
   })()
 
   $('#myModal').on('shown.bs.modal', function () {
