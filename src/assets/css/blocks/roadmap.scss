@@ -165,7 +165,7 @@
 
       &:nth-child(even) {
         .roadmap__itemNameWrap {
-          padding-left: 20px;
+          padding-left: 200px;
 
           @media(max-width: $xl-max-width) {
             padding-left: 0;
@@ -173,7 +173,7 @@
         }
 
         .roadmap__itemDescr {
-          padding-left: 20px;
+          padding-left: 200px;
 
           @media(max-width: $xl-max-width) {
             padding-left: 0px;
@@ -240,7 +240,7 @@
 
       &:nth-child(odd) {
         .roadmap__itemNameWrap {
-          padding-right: 100px;
+          padding-right: 200px;
 
           @media(max-width: $xl-max-width) {
             padding-right: 0;
@@ -248,7 +248,7 @@
         }
 
         .roadmap__itemDescr {
-          padding-right: 100px;
+          padding-right: 200px;
 
           @media(max-width: $xl-max-width) {
             padding-right: 0;

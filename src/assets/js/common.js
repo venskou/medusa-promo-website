@@ -209,56 +209,67 @@ Strut.ready(function () {
 
 var spikes = [
 {
-  height: 32.8,
-  name: 'btg',
-  percents: 280
+  height: 40,
+  name: 'Binance Coin',
+  ticker: 'bnb',
+  left: 0,
+  percents: 8061
 },
 {
-  height: 41.5,
-  name: 'emc2',
-  percents: 640
+  height: 45,
+  name: 'Golem',
+  ticker: 'gnt',
+  left: 12,
+  percents: 8434
 },
 {
-  height: 69.4,
-  name: 'powr',
-  percents: 970
+  height: 50,
+  name: 'Ethereum',
+  ticker: 'eth',
+  left: 24,
+  percents: 9162
 },
 {
-  height: 61.9,
-  name: 'iota',
-  percents: 830
+  height: 55,
+  name: 'Dash',
+  ticker: 'dash',
+  left: 36,
+  percents: 9265
 },
 {
-  height: 55.4,
-  name: 'xmr',
-  percents: 720
+  height: 65,
+  name: 'Stellar',
+  ticker: 'xlm',
+  left: 48,
+  percents: 14441
 },
 {
-  height: 99.3,
-  name: 'eos',
-  percents: 1860
+  height: 75,
+  name: 'Ardor',
+  ticker: 'ardr',
+  left: 60,
+  percents: 16809
 },
 {
-  height: 70.0,
-  name: 'neo',
-  percents: 940
+  height: 82,
+  name: 'NEM',
+  ticker: 'xem',
+  left: 72,
+  percents: 29842
 },
 {
-  height: 51.4,
-  name: 'nxt',
-  percents: 670
-},
-{
-  height: 91.3,
-  name: 'xpr',
-  percents: 1460
+  height: 90,
+  name: 'Ripple',
+  left: 84.5,
+  ticker: 'xrp',
+  percents: 36018
 }
 ]
 
 $(document).ready(function () {
   (function generateSpikes () {
     spikes.forEach(function (item, index) {
-      var element = '<span class="pageHeader__statsItem pageHeader__statsItem--' + item.name + ' index-' + index + '"><span class="pageHeader__statsItemName">' + item.name + '</span><span class="pageHeader__statsItemPercents"></span></span>'
+      var element = '<span class="pageHeader__statsItem index-' + index + '" style="left: ' + item.left + '%;"><span class="pageHeader__statsItemName">' + item.name + '</span><span class="pageHeader__statsItemPercents"></span></span>'
       $(element).appendTo('.pageHeader__stats')
     })
   })();
@@ -323,7 +334,12 @@ $(document).ready(function () {
           easing: 'ease-in-out',
           duration: Math.random() * 1000 + 1000,
           progress: function (elements, complete, remaining, start, tweenValue) {
-            $percents.text('+' + Math.round(tweenValue) + '%');
+            function numberWithCommas(value) {
+              var parts = value.toString().split(".");
+              parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+              return parts.join(".");
+            }
+            $percents.text('' + numberWithCommas(Math.round(tweenValue)) + '%');
           },
           complete: function(){
             var indexes = indexBuffer.filter(function(entry){

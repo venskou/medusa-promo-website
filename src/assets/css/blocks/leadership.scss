@@ -95,4 +95,10 @@
       width: 100%;
     }
   }
+
+  &__line {
+    max-width: 800px;
+    margin: rem(60) auto 0;
+    border-top: 2px solid $purple-light;
+  }
 }

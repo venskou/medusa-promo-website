@@ -2,7 +2,7 @@
 
   &__global-nav {
     margin-bottom: -103px;
-    margin-top: 60px;
+    margin-top: 50px;
     position: relative;
     left: 0;
     right: 0;
@@ -135,22 +135,17 @@
 
     &__img {
       position: relative;
-      top: -11px;
-      padding-bottom: rem(12);
       width: 230px;
 
       span {
         display: inline-block;
         vertical-align: top;
-        width: 184px;
+        width: 150px;
         height: 60px;
         background-repeat: no-repeat;
-        background-size: 184px 60px;
+        background-size: contain;
+        background-position: left top;
         background-image: url(../../assets/img/logo.png);
-      }
-
-      @media(max-width: $md-max-width) {
-        top: -7px;
       }
     }
 

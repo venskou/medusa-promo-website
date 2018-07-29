@@ -261,3 +261,25 @@ div.datepicker-top-right {
           border-bottom-color: $blue;
     }
 }
+
+.nav-pills-custom {
+  .nav-link {
+    margin-right: rem(20);
+    margin-bottom: rem(20);
+    font-size: rem(16);
+    font-weight: bold;
+    background: $purple-light;
+
+    &.active {
+      background: $blue;
+    }
+  }
+}
+
+.color-blue {
+  color: $blue;
+}
+
+b, strong {
+  font-weight: bold;
+}

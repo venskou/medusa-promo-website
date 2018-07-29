@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Medusa</title>
+  <link rel="apple-touch-icon" sizes="76x76" href="../../assets/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../../assets/img/favicon/manifest.json">
+  <link rel="mask-icon" href="../../assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../assets/vendors/bootstrap-4.0.0-beta.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/vendors/smartwizard/dist/css/smart_wizard.min.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/vendors/chartist-js/chartist.css">
+  <link rel="stylesheet" type="text/css" href="../../assets/vendors/datepicker/build/datepicker.min.css">
+  <script src="../../assets/vendors/jquery/dist/jquery.min.js"></script>
+  <script src="../../assets/vendors/popper.js/dist/umd/popper.min.js"></script>
+  <script src="../../assets/vendors/bootstrap-4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="../../assets/vendors/velocity/velocity.min.js"></script>
+  <script src="../../assets/vendors/chartist-js/chartist.js"></script>
+  <script src="../../assets/vendors/smartwizard/dist/js/jquery.smartWizard.js"></script>
+  <script src="../../assets/vendors/datepicker/build/datepicker.min.js"></script>
+  <script src="../../assets/js/common.js"></script>
+</head>
+<body>
+//=../../templates/navigation.html
+<header class="pageHeader pageHeader--innerPage"></header>
+<section class="pageDescr">
+  <div class="pageDescr__title">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>
+            Medusa Token Sale
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="registration">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="registration__wrapper">
+          <div class="registration__title">
+            <h2>Registration Form</h2>
+          </div>
+          <div class="registration__steps" id="smartwizard">
+            <ul class="registration__stepsList">
+              <li class="registration__stepsItem">
+                <a href="#step-1" class="registration__stepsLink registration__stepsLink--first">
+                  <span>Step 1</span>
+                  <span class="registration__stepsDescr">Buy Medusa Tokens </span>
+                </a>
+              </li>
+              <li class="registration__stepsItem">
+                <a href="#step-2" class="registration__stepsLink">
+                  <span>Step 2</span>
+                  <span class="registration__stepsDescr">Additional Information</span>
+                </a>
+              </li>
+              <li class="registration__stepsItem">
+                <a href="#step-3" class="registration__stepsLink">
+                  <span>Step 3</span>
+                  <span class="registration__stepsDescr">Contributing</span>
+                </a>
+              </li>
+              <li class="registration__stepsItem">
+                <a href="#step-4" class="registration__stepsLink">
+                  <span>Step 4</span>
+                  <span class="registration__stepsDescr">Finish</span>
+                </a>
+              </li>
+            </ul>
+            <div class="registration__stepsData">
+              <div id="step-1" class="registration__stepContentWrapper">
+                <div class="row justify-content-between">
+                  <div class="col-lg-6">
+                    <div class="registration__stepPartitionTitle">
+                      Buy Medusa Tokens
+                    </div>
+                    <form class="registration__form">
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="firstName">First Name</label>
+                        <input type="text" class="startPopup__emailInput" id="firstName">
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="surname">Surname</label>
+                        <input type="text" class="startPopup__emailInput" id="surname">
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="regEmail">Email adress</label>
+                        <input type="email" class="startPopup__emailInput" id="regEmail">
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="regDob">Date of Birth</label>
+                        <input type="text" data-toggle="datepicker" class="form-control startPopup__emailInput" id="regDob">
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="nationality">Nationality</label>
+                        <div class="registration__selectWrapper">
+                          <select class="registration__select" name="nationality" id="nationality">
+                            <option value="us">US</option>
+                            <option value="uk">UK</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="nationality">In which currency do you want to purchase Medusa Tokens?</label>
+                        <div class="registration__btnGroup btn-group btn-group-toggle" data-toggle="buttons">
+                          <label class="registration__btnCheckbox registration__btnCheckbox--currency btn active">
+                            <input type="radio" name="currency" id="btc" autocomplete="off" checked> BTC
+                          </label>
+                          <label class="registration__btnCheckbox registration__btnCheckbox--currency btn">
+                            <input type="radio" name="currency" id="ltc" autocomplete="off"> LTC
+                          </label>
+                          <label class="registration__btnCheckbox registration__btnCheckbox--currency btn">
+                            <input type="radio" name="currency" id="eth" autocomplete="off"> ETH
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="registration__stepText">
+                      <p>
+                        Please fill in this form in order to be eligible to purchase Medusa Tokens.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="step-2" class="registration__stepContentWrapper">
+                <div class="row justify-content-between">
+                  <div class="col-lg-6">
+                    <div class="registration__stepPartitionTitle">
+                      Additional Information
+                    </div>
+                    <form class="registration__form">
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel">Have you ever contributed to any ICO before?</label>
+                        <div class="registration__btnGroup btn-group btn-group-toggle" data-toggle="buttons">
+                          <label class="registration__btnCheckbox btn active">
+                            <input type="radio" name="contributed" autocomplete="off" checked> Yes
+                          </label>
+                          <label class="registration__btnCheckbox btn">
+                            <input type="radio" name="contributed" autocomplete="off"> No
+                          </label>
+                        </div>
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel">Are you of sound mind, capable of making your own financial investments?</label>
+                        <div class="registration__btnGroup btn-group btn-group-toggle" data-toggle="buttons">
+                          <label class="registration__btnCheckbox btn active">
+                            <input type="radio" name="soundmind" autocomplete="off" checked> Yes
+                          </label>
+                          <label class="registration__btnCheckbox btn">
+                            <input type="radio" name="soundmind" autocomplete="off"> No
+                          </label>
+                        </div>
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel">Do you make this investment in the full awareness that investing is always risky and although you may make fantastic returns you may also lose your full investment? </label>
+                        <div class="registration__btnGroup btn-group btn-group-toggle" data-toggle="buttons">
+                          <label class="registration__btnCheckbox btn active">
+                            <input type="radio" name="awareness" autocomplete="off" checked> Yes
+                          </label>
+                          <label class="registration__btnCheckbox btn">
+                            <input type="radio" name="awareness" autocomplete="off"> No
+                          </label>
+                        </div>
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel">
+                          Are you able to legally invest in a new token?<br>
+                        </label>
+                        <div class="registration__btnGroup btn-group btn-group-toggle" data-toggle="buttons">
+                          <label class="registration__btnCheckbox btn active">
+                            <input type="radio" name="able" autocomplete="off" checked> Yes
+                          </label>
+                          <label class="registration__btnCheckbox btn">
+                            <input type="radio" name="able" autocomplete="off"> No
+                          </label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="registration__stepText">
+                      <p>
+                        In order to confirm that you are aware that you are buying tokens of an ICO and enter into this transaction as an independent purchaser please answer all questions presented.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="step-3" class="registration__stepContentWrapper">
+                <div class="row justify-content-between" data-coin="BTC">
+                  <div class="col-lg-6">
+                    <div class="registration__stepPartitionTitle">
+                      Contributing in BTC
+                    </div>
+                    <form class="registration__form">
+                      <div class="registration__formRow">
+                        <span class="registration__inputLabel">
+                          KYC (Know your customer). It is important that we can prove, if asked, where money is coming from.
+                        </span>
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="picPass">Upload a picture of your passport</label>
+                        <input type="file" class="startPopup__emailInput" id="picPass">
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="picPass">Upload a proof of address</label>
+                        <input type="file" class="startPopup__emailInput" id="picAddr">
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="btcCount">How much BTC will you be sending?</label>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <input type="text" class="startPopup__emailInput" id="btcCount">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="ethAdress">Enter your ETH address (Check the notes on the righthand side first)</label>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <input type="text" class="startPopup__emailInput" id="ethAdress">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel">Please send the amount of Bitcoin you have specified to the following BTC address.</label>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="registration__inputGroup input-group mb-3">
+                              <input type="text" class="startPopup__emailInput form-control" disabled>
+                              <div class="input-group-append">
+                                <button class="registration__inputGroupBtn btn" type="button">Copy</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="registration__stepText">
+                        <p>
+                          Please ensure you only send BTC to this address.
+                        </p>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="registration__stepText">
+                      <p>
+                        The exchange rate between Medusa and Bitcoin is fixed. It is <span class="bold"> 1&nbsp;BTC&nbsp;=&nbsp;20,000&nbsp;MEDUSA</span>
+                      </p>
+                      <p>
+                        You can send BTC from any wallet or even any exchange to our wallet address however, you must enter your Ethereum wallet address so that we can send you back your MEDUSA tokens at the end of the token sale.
+                      </p>
+                      <p>
+                        You must own your private keys for this wallet address and ensure it supports ERC20 tokens.
+                      </p>
+                      <p>
+                        Compatible wallets include:
+                      </p>
+                      <p>
+                        MetaMask, MIST, Parity, Myetherwallet, imToken or more.
+                      </p>
+                      <p>
+                        DO NOT put your exchange wallet here.
+                      </p>
+                      <p>
+                        <span class="bold">IMPORTANT</span> - Make sure that you do not send duplicate payments. If you wish to contribute a second time, please go through the ICO contribution process again, where you may see a different contribution wallet.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-between" data-coin="LTC" style="display: none">
+                  <div class="col-lg-6">
+                    <div class="registration__stepPartitionTitle">
+                      Contributing in LTC
+                    </div>
+                    <form class="registration__form">
+                      <div class="registration__formRow">
+                        <span class="registration__inputLabel">
+                          KYC (Know your customer). It is important that we can prove, if asked, where money is coming from.
+                        </span>
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="picPass">Upload a picture of your passport</label>
+                        <input type="file" class="startPopup__emailInput" id="picPass">
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="picPass">Upload a proof of address</label>
+                        <input type="file" class="startPopup__emailInput" id="picAddr">
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="btcCount">How much LTC will you be sending?</label>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <input type="text" class="startPopup__emailInput" id="btcCount">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="ethAdress">Enter your ETH address (Check the notes on the righthand side first)</label>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <input type="text" class="startPopup__emailInput" id="ethAdress">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel">Please send the amount of Litecoin you have specified to the following LTC address.</label>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="registration__inputGroup input-group mb-3">
+                              <input type="text" class="startPopup__emailInput form-control" disabled>
+                              <div class="input-group-append">
+                                <button class="registration__inputGroupBtn btn" type="button">Copy</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="registration__stepText">
+                        <p>
+                          Please ensure you only send LTC to this address.
+                        </p>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="registration__stepText">
+                      <p>
+                        The exchange rate between Medusa and Litecoin is fixed. It is <span class="bold"> 1&nbsp;LTC&nbsp;=&nbsp;300&nbsp;MEDUSA</span>
+                      </p>
+                      <p>
+                        You can send LTC from any wallet or even any exchange to our wallet address however, you must enter your Ethereum wallet address so that we can send you back your MEDUSA tokens at the end of the token sale.
+                      </p>
+                      <p>
+                        You must own your private keys for this wallet address and ensure it supports ERC20 tokens.
+                      </p>
+                      <p>
+                        Compatible wallets include:
+                      </p>
+                      <p>
+                        MetaMask, MIST, Parity, Myetherwallet, imToken or more.
+                      </p>
+                      <p>
+                        DO NOT put your exchange wallet here.
+                      </p>
+                      <p>
+                        <span class="bold">IMPORTANT</span> - Make sure that you do not send duplicate payments. If you wish to contribute a second time, please go through the ICO contribution process again, where you may see a different contribution wallet.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-between" data-coin="ETH" style="display: none">
+                  <div class="col-lg-6">
+                    <div class="registration__stepPartitionTitle">
+                      Contributing in ETH
+                    </div>
+                    <form class="registration__form">
+                      <div class="registration__formRow">
+                        <span class="registration__inputLabel">
+                          KYC (Know your customer). It is important that we can prove, if asked, where money is coming from.
+                        </span>
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="picPass">Upload a picture of your passport</label>
+                        <input type="file" class="startPopup__emailInput" id="picPass">
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="picPass">Upload a proof of address</label>
+                        <input type="file" class="startPopup__emailInput" id="picAddr">
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="btcCount">How much ETH will you be sending?</label>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <input type="text" class="startPopup__emailInput" id="btcCount">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel" for="ethAdress">Enter your ETH address (Check the notes on the righthand side first)</label>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <input type="text" class="startPopup__emailInput" id="ethAdress">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="registration__formRow">
+                        <label class="registration__inputLabel">Please send the amount of Bitcoin you have specified to the following BTC address.</label>
+                        <div class="row">
+                          <div class="col-lg-6">
+                            <div class="registration__inputGroup input-group mb-3">
+                              <input type="text" class="startPopup__emailInput form-control" disabled>
+                              <div class="input-group-append">
+                                <button class="registration__inputGroupBtn btn" type="button">Copy</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="registration__stepText">
+                        <p>
+                          Please ensure you only send BTC to this address.
+                        </p>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="registration__stepText">
+                      <p>
+                        The exchange rate between Medusa and Litecoin is fixed. It is <span class="bold"> 1&nbsp;ETH&nbsp;=&nbsp;2,000&nbsp;MEDUSA</span>
+                      </p>
+                      <p>
+                        You can send ETH from any wallet or even any exchange to our wallet address however, you must enter your Ethereum wallet address so that we can send you back your MEDUSA tokens at the end of the token sale.
+                      </p>
+                      <p>
+                        You must own your private keys for this wallet address and ensure it supports ERC20 tokens.
+                      </p>
+                      <p>
+                        Compatible wallets include:
+                      </p>
+                      <p>
+                        MetaMask, MIST, Parity, Myetherwallet, imToken or more.
+                      </p>
+                      <p>
+                        DO NOT put your exchange wallet here.
+                      </p>
+                      <p>
+                        <span class="bold">IMPORTANT</span> - Make sure that you do not send duplicate payments. If you wish to contribute a second time, please go through the ICO contribution process again, where you may see a different contribution wallet.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="step-4" class="registration__stepContentWrapper">
+                <div class="row justify-content-between">
+                  <div class="col-lg-12 text-center">
+                    <img src="/assets/img/congrats.jpg" class="img-fluid">
+                    <div class="registration__stepPartitionTitle registration__stepPartitionTitle--thankYou ">
+                      Thank you for participating in the Medusa ICO
+                    </div>
+                    <div class="registration__stepText">
+                      <p>
+                        We’re going to make history together
+                      </p>
+                      <p>
+                        Please like our facebook page <a href="#">HERE</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="counter">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="counter__title">
+          <h2>
+            Join today
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="counter__wrapper" id="counter">
+        <div class="counter__item">
+          <div class="counter__value">
+            <span class="counter__valueText counter__valueText--days"></span>
+          </div>
+          <span class="counter__itemName">Days</span>
+        </div>
+        <div class="counter__item">
+          <div class="counter__value">
+            <span class="counter__valueText counter__valueText--hours"></span>
+          </div>
+          <span class="counter__itemName">Hours</span>
+        </div>
+        <div class="counter__item">
+          <div class="counter__value">
+            <span class="counter__valueText counter__valueText--minutes"></span>
+          </div>
+          <span class="counter__itemName">Minutes</span>
+        </div>
+        <div class="counter__item">
+          <div class="counter__value">
+            <span class="counter__valueText counter__valueText--seconds"></span>
+          </div>
+          <span class="counter__itemName">Seconds</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="icodate partition">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="icodate__title title">
+          <h3>ICO Date <span class="icodate__titleBadge badge badge--purple">May 15, 2018</span></h3>
+        </div>
+        <div class="table-responsive">
+          <table class="icodate__table table table--unborderedTop">
+            <tr>
+              <td>Token name</td>
+              <td class="table__data table__data--bold">Medusa</td>
+            </tr>
+            <tr>
+              <td>Token symbol</td>
+              <td class="table__data table__data--bold">Med</td>
+            </tr>
+            <tr>
+              <td>Total token supplied</td>
+              <td class="table__data table__data--bold">100,000,000</td>
+            </tr>
+            <tr>
+              <td>Price per token</td>
+              <td class="table__data table__data--bold">100 Med = 1 ETH</td>
+            </tr>
+            <tr>
+              <td>CAP</td>
+              <td class="table__data table__data--bold">70,000 ETH</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bonus partition">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="bonus__title title">
+          <h3>Bonus system</h3>
+        </div>
+        <div class="table-responsive">
+          <table class="bonus__table table table--unborderedTop">
+            <tbody>
+            <tr>
+              <td>ETH Collected</td>
+              <td class="table__data table__data--bold">0-5%</td>
+              <td class="table__data table__data--bold">6-26%</td>
+              <td class="table__data table__data--bold">27-42%</td>
+              <td class="table__data table__data--bold">43-56%</td>
+              <td class="table__data table__data--bold">57-69%</td>
+            </tr>
+            <tr>
+              <td>Discount</td>
+              <td><span class="badge badge--pink">25%</span></td>
+              <td><span class="badge badge--pink badge--op7">12%</span></td>
+              <td><span class="badge badge--pink badge--op6">8%</span></td>
+              <td><span class="badge badge--pink badge--op5">5%</span></td>
+              <td><span class="badge badge--pink badge--op4">3%</span></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="distrubution partition">
+  <div class="container-fluid">
+    <div class="row pb-5 mb-5">
+      <div class="col-lg-7">
+        <div class="distrubution__title title">
+          <h3>Token distrubution</h3>
+        </div>
+        <table class="distrubution__table table table--unborderedTop">
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td>ICO</td>
+            <td class="table__data table__data--bold"><span class="chart-label bg-a"></span> 74%</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Team</td>
+            <td class="table__data table__data--bold"><span class="chart-label bg-b"></span> 10%</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Pre-ICO</td>
+            <td class="table__data table__data--bold"><span class="chart-label bg-c"></span> 6%</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Promo Activities</td>
+            <td class="table__data table__data--bold"><span class="chart-label bg-d"></span> 4%</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Advisors</td>
+            <td class="table__data table__data--bold"><span class="chart-label bg-e"></span> 4%</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Bounty Campaign</td>
+            <td class="table__data table__data--bold"><span class="chart-label bg-f"></span> 2%</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-5">
+        <div class="ct-chart"></div>
+        <script>
+          new Chartist.Pie('.ct-chart', {
+            series: [74, 10, 6, 4, 4, 2]
+          }, {
+            donut: true,
+            donutWidth: 60,
+            donutSolid: true,
+            startAngle: 270,
+            showLabel: true
+          });
+        </script>
+      </div>
+    </div>
+    <div class="row pb-5">
+      <div class="col-lg-7">
+        <div class="distrubution__title title">
+          <h3>Funds distrubution</h3>
+        </div>
+        <table class="distrubution__table table table--unborderedTop">
+          <tbody>
+          <tr>
+            <td>1</td>
+            <td>Product Development & Maintenance</td>
+            <td class="table__data table__data--bold"><span class="chart-label bg-a"></span> 30%</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Business Growth and Development</td>
+            <td class="table__data table__data--bold"><span class="chart-label bg-b"></span> 25%</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Marketing and Customer Development</td>
+            <td class="table__data table__data--bold"><span class="chart-label bg-c"></span> 15%</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Reserve</td>
+            <td class="table__data table__data--bold"><span class="chart-label bg-d"></span> 15%</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Operations</td>
+            <td class="table__data table__data--bold"><span class="chart-label bg-e"></span> 10%</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>Legal</td>
+            <td class="table__data table__data--bold"><span class="chart-label bg-f"></span> 5%</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-lg-5">
+        <div class="ct-chart-2"></div>
+        <script>
+          new Chartist.Pie('.ct-chart-2', {
+            series: [30, 25, 15, 15, 10, 5]
+          }, {
+            donut: true,
+            donutWidth: 60,
+            donutSolid: true,
+            startAngle: 310,
+            showLabel: true
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sign">
+  <div class="container-fluid">
+    <div class="row ">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <div class="sign__btnWrap">
+          <a href="#" class="sign__btn" data-toggle="modal" data-target="#start-modal">
+            Sign Up
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+//=../../templates/footer.html
+//=../../templates/registrationModal.html
+</body>
+</html>

@@ -164,4 +164,34 @@
       margin-bottom: 0;
     }
   }
+
+  &__links {
+    padding: rem(30) 0 rem(70);
+  }
+
+  &__linksWrapper {
+    margin: 0 200px;
+    @media (max-width: $xl-max-width) {
+      margin: 0;
+    }
+  }
+
+  &__linksItem {
+    text-align: center;
+    margin-bottom: rem(20);
+    img {
+      margin-bottom: rem(20);
+      max-width: 60px;
+    }
+    a {
+      color: $blue;
+      font-weight: bold;
+      font-size: rem(14);
+      &:hover {
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
 }

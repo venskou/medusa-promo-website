@@ -154,10 +154,9 @@
     img {
       margin: 0 auto;
       display: block;
-      width: rem(410);
-      height: rem(263);
+      width: rem(700);
 
-      @media(max-width: 370px) {
+      @media(max-width: $md-max-width) {
         height: auto;
         width: 100%;
         padding-left: 10px;
