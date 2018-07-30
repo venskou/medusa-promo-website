@@ -54,17 +54,17 @@ $(function () {
   //////////////////////////////////////////////////
   // Change Card
 
-  $('.debitPromo__card img').on('click', function(){
-    var url = $(this).attr('data-url')
-    var count = parseInt($(this).attr('data-count')) + 1
-
-    if (count === 13) {
-      count = 1
-    }
-
-    $(this).attr('src', url + count + '.svg')
-    $(this).attr('data-count', count)
-  })
+  // $('.debitPromo__card img').on('click', function(){
+  //   var url = $(this).attr('data-url')
+  //   var count = parseInt($(this).attr('data-count')) + 1
+  //
+  //   if (count === 13) {
+  //     count = 1
+  //   }
+  //
+  //   $(this).attr('src', url + count + '.svg')
+  //   $(this).attr('data-count', count)
+  // })
 
 })
 
