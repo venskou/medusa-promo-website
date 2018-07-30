@@ -1,8 +1,10 @@
 .typo {
   font-size: rem(16);
+  overflow: hidden;
 
   &__wrapper {
-    padding: rem(100) rem(130);
+    padding: rem(50) rem(130) rem(70);
+    margin-top: rem(50);
     margin-bottom: rem(50);
     border: 3px solid $purple-light;
     border-radius: 10px;
@@ -12,8 +14,7 @@
     background-position: 0 250px;
     position: relative;
     will-change: transform;
-    background-attachment: fixed;
-    
+
     @media (max-width: $md-max-width) {
       padding: 0;
       border: 0;

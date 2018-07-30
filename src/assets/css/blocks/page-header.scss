@@ -1,12 +1,12 @@
 .pageHeader {
   background-color: #371be1;
   color: #fff;
-  padding-top: rem(120);
+  padding-top: rem(140);
   // padding-bottom: rem(142);
   // overflow: hidden;
   height: 100%;
-  min-height: 750px;
-  max-height: 750px;
+  min-height: 700px;
+  max-height: 700px;
 
   @media (max-width: $xl-max-width) {
     padding-top: rem(160);
@@ -58,7 +58,7 @@
       line-height: rem(60);
       letter-spacing: 0.4px;
       margin-bottom: 0;
-      max-width: 520px;
+      max-width: 500px;
 
       @media (max-width: $md-max-width) {
         max-width: none;

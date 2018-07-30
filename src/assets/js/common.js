@@ -35,6 +35,36 @@ $(function () {
       trigger: 'hover'
     })
   })
+
+  //////////////////////////////////////////////////
+  // Scroll Bg
+
+  $(window).scroll(function () {
+    setBackgroundPosition();
+  })
+  $(window).resize(function() {
+    setBackgroundPosition();
+  });
+  function setBackgroundPosition(){
+    $('.typo__wrapper').css('background-position', "0px " + (Math.max(document.body.scrollTop, document.documentElement.scrollTop) / 1.5) + "px");
+  }
+
+
+  //////////////////////////////////////////////////
+  // Change Card
+
+  $('.debitPromo__card img').on('click', function(){
+    var url = $(this).attr('data-url')
+    var count = parseInt($(this).attr('data-count')) + 1
+
+    if (count === 13) {
+      count = 1
+    }
+
+    $(this).attr('src', url + count + '.svg')
+    $(this).attr('data-count', count)
+  })
+
 })
 
 //////////////////////////////////////////////////

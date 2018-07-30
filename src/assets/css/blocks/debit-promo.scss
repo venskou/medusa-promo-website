@@ -9,7 +9,7 @@
 
 .debitPromo {
   padding-top: rem(100);
-  padding-bottom:rem(100);
+  padding-bottom:rem(140);
   overflow-x: hidden;
 
   @media(max-width: $xl-max-width) {
@@ -154,7 +154,8 @@
     img {
       margin: 0 auto;
       display: block;
-      width: rem(700);
+      width: rem(600);
+      max-height: rem(400);
 
       @media(max-width: $md-max-width) {
         height: auto;

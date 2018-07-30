@@ -1,9 +1,6 @@
 html {
-  font-size: 13px;
-  @media (max-width: $xl-max-width) {
-    font-size: 12px;
-  }
-  @media (max-width: $sm-max-width) {
+  font-size: 12px;
+  @media (max-width: $md-max-width) {
     font-size: 11px;
   }
 }
@@ -43,7 +40,7 @@ input[type=text], input[type=password], input[type=email], textarea {
 }
 
 .container-fluid {
-  max-width: 1400px;
+  max-width: 1280px;
   padding-left: 40px;
   padding-right: 40px;
 
@@ -272,6 +269,11 @@ div.datepicker-top-right {
 
     &.active {
       background: $blue;
+    }
+  }
+  li:last-child {
+    .nav-link {
+      margin-right: 0;
     }
   }
 }
