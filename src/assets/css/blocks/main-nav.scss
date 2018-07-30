@@ -314,6 +314,12 @@
       padding-left: rem(21);
       padding-right: rem(22);
 
+      &.active {
+        span {
+          border-bottom: 1px solid $white;
+        }
+      }
+
       &:first-child {
         padding-left: 0;
       }

@@ -94,13 +94,17 @@
 
   &__quote {
     background: $blue;
-    padding: rem(60) rem(130);
+    padding: rem(100) rem(130);
     margin: rem(60) rem(-130);
     font-weight: bold;
     color: $white;
     font-size: rem(36);
+    background-image: url(../../assets/img/content/quote.png);
+    background-repeat: no-repeat;
+    background-position: right 70px;
+    background-size: 40%;
     span {
-      max-width: 650px;
+      max-width: 680px;
       display: block;
     }
 
