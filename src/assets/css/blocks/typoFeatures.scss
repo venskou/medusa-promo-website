@@ -1,0 +1,96 @@
+.typoFeatures {
+  margin: rem(40) 0 rem(50);
+
+  &__table {
+    text-align: center;
+
+    thead th {
+      vertical-align: middle;
+      border: 3px solid $purple;
+      color: $blue;
+      font-size: rem(16);
+    }
+
+    td {
+      vertical-align: middle;
+      border: 3px solid $purple;
+      font-size: rem(16);
+
+      &:nth-child(2) {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__tableRow {
+    &--blue {
+      color: $white;
+      background-color: $blue;
+      font-weight: 700;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+
+    @media(max-width: $sm-max-width) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__listItem {
+    margin-bottom: 0;
+    padding-left: rem(50);
+    padding-bottom: rem(10);
+    position: relative;
+
+    &:last-child {
+      .typoFeatures__listMark {
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__listMark {
+    width: rem(50);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $blue;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 8px;
+
+      @media (max-width: $md-max-width) {
+        top: 6px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background-color: $blue;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 19px;
+      bottom: -13px;
+
+      @media (max-width: $md-max-width) {
+        top: 17px;
+        bottom: -11px;
+      }
+    }
+  }
+}
