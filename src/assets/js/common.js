@@ -290,7 +290,7 @@ var spikes = [
 {
   height: 90,
   name: 'Ripple',
-  left: 84.5,
+  left: 82.5,
   ticker: 'xrp',
   percents: 36018
 }

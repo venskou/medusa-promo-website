@@ -27,6 +27,7 @@
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: rem(30);
     margin-top: rem(30);
+    line-height: 1.8;
   }
 
   p {
@@ -39,7 +40,7 @@
     font-size: rem(32);
     text-align: center;
     color: $blue;
-    margin: rem(40) 0 rem(50);
+    margin: rem(80) 0;
     span {
       border-bottom: 5px solid $blue-bg;
     }
@@ -147,6 +148,46 @@
         height: 10px;
         background: darken($purple-light, 6%);
         border-radius: 8px;
+      }
+    }
+  }
+
+  &__countBlock {
+    padding: rem(30) rem(50) rem(30) rem(40);
+    border-radius: 6px;
+    background: $purple-light;
+    margin-bottom: rem(30);
+    min-height: rem(122);
+    position: relative;
+
+    &:hover {
+      .typo__countBlock__count {
+        border-color: $blue;
+        background: $blue;
+        color: $white;
+      }
+    }
+
+    &__count {
+      font-size: rem(36);
+      float: left;
+      width: 60px;
+      background: $purple-light;
+      text-align: center;
+      border-radius: 5px;
+      border: 3px solid white;
+      height: 60px;
+      line-height: 58px;
+      font-weight: 700;
+      margin-top: rem(7);
+      transition: all .2s ease-in-out;
+    }
+
+    &__content {
+      margin-left: 90px;
+      line-height: 1.8;
+      h5 {
+        max-width: rem(900);
       }
     }
   }
