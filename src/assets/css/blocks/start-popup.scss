@@ -16,20 +16,21 @@
   padding-right: rem(17);
 
   &__description {
-    margin-bottom: rem(30);
+    margin-bottom: rem(20);
     line-height: 2;
   }
 
   .modal-dialog {
-    max-width: 597px;
+    max-width: 550px;
     width: 100%;
     margin: auto;
   }
 
   .modal-header {
-    padding-top: 63px;
-    padding-left: rem(66);
-    padding-right: rem(66);
+    padding-top: rem(40);
+    padding-left: rem(42);
+    padding-right: rem(42);
+    padding-bottom: 0;
     border-bottom: none;
 
     @media (max-width: $sm-max-width) {
@@ -56,9 +57,9 @@
   }
 
   .modal-body {
-    padding-bottom: rem(63);
-    padding-left: rem(66);
-    padding-right: rem(66);
+    padding-bottom: rem(43);
+    padding-left: rem(42);
+    padding-right: rem(42);
     padding-top: rem(10);
 
     @media (max-width: $sm-max-width) {
@@ -155,7 +156,7 @@
   }
 
   &__accountType {
-    margin-bottom: rem(30);
+    margin-bottom: rem(20);
 
     @media (max-width: $sm-max-width) {
       margin-bottom: rem(15);
@@ -198,7 +199,7 @@
   }
 
   .startPopup__email {
-    margin-bottom: rem(30);
+    margin-bottom: rem(20);
   }
 
   .startPopup__emailLabel {
