@@ -186,6 +186,10 @@
     min-height: rem(122);
     position: relative;
 
+    &--white {
+      background: transparent;
+    }
+
     &:hover {
       .typo__countBlock__count {
         border-color: $blue;
