@@ -178,6 +178,11 @@ input[type=text], input[type=password], input[type=email], textarea {
       text-transform: uppercase;
       font-weight: 700;
     }
+
+    &--white {
+      background-color: $blue;
+      color: $white;
+    }
   }
 }
 
@@ -216,27 +221,27 @@ input[type=text], input[type=password], input[type=email], textarea {
 }
 
 .bg-a {
-  background: #371be1 !important;
+  background: #381CDF !important;
 }
 
 .bg-b {
-  background: #f3cb0b !important;
+  background: #756BEF !important;
 }
 
 .bg-c {
-  background: #b8bcc1 !important;
+  background: #7C7CEC !important;
 }
 
 .bg-d {
-  background: #7c9797 !important;
+  background: #9191F5 !important;
 }
 
 .bg-e {
-  background: #486f97 !important;
+  background: #CCCCFF !important;
 }
 
 .bg-f {
-  background: #f6a613 !important;
+  background: #A6A6F5 !important;
 }
 
 .chart-label {

@@ -2,6 +2,14 @@
 
   &__table {
     min-width: 540px;
+    text-align: center;
+
+    thead th {
+      vertical-align: bottom;
+      font-size: rem(16);
+      border: none;
+      color: $blue;
+    }
 
     tr {
       td {

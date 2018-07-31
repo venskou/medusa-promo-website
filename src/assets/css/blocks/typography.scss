@@ -1,10 +1,15 @@
 .typo {
   font-size: rem(16);
   overflow: hidden;
+  margin-top: rem(-88);
+
+  @media(max-width: $md-max-width) {
+    margin-top: rem(12);
+  }
 
   &__wrapper {
-    padding: rem(50) rem(130) rem(70);
-    margin-top: rem(50);
+    padding: rem(11) rem(130) rem(70);
+    background-color: $white;
     margin-bottom: rem(50);
     border: 3px solid $purple-light;
     border-radius: 10px;
@@ -59,6 +64,22 @@
 
       @media ($md-max-width) {
         max-width: 100%;
+      }
+    }
+
+    &--fullWidth {
+      margin-top: rem(70);
+
+      @media(max-width: $md-max-width) {
+        margin-top: 0;
+      }
+
+      img {
+        max-width: 110%;
+
+        @media(max-width: $md-max-width) {
+          max-width: 100%;
+        }
       }
     }
   }
@@ -116,6 +137,7 @@
   .btn-custom {
     color: $white;
     background: $blue;
+    white-space: normal;
     &:hover {
       background: lighten($blue, 6%);
     }
@@ -158,7 +180,7 @@
 
   &__countBlock {
     padding: rem(30) rem(50) rem(30) rem(40);
-    border-radius: 6px;
+    border-radius: 8px;
     background: $purple-light;
     margin-bottom: rem(30);
     min-height: rem(122);
@@ -178,7 +200,7 @@
       width: 60px;
       background: $purple-light;
       text-align: center;
-      border-radius: 5px;
+      border-radius: 50%;
       border: 3px solid white;
       height: 60px;
       line-height: 58px;
@@ -194,5 +216,52 @@
         max-width: rem(900);
       }
     }
+  }
+
+  &__aniCard {
+    background-color: $purple-light;
+    padding-left: rem(30);
+    padding-right: rem(30);
+    padding-bottom: rem(4);
+    padding-top: rem(20);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    transition: color 0.2s;
+
+    h5 {
+      margin-top: 0;
+      margin-bottom: rem(18);
+      color: $blue;
+      transition: color 0.2s;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 100%;
+      background-color: $blue;
+      transition: right 0.2s;
+    }
+
+    &:hover {
+      color: $white;
+
+      h5 {
+        color: $white;
+      }
+
+      &::before {
+        right: 0;
+      }
+    }
+  }
+
+  &__cardTextWrapper {
+    position: relative;
+    z-index: 10;
   }
 }

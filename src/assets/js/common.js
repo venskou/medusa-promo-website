@@ -48,6 +48,7 @@ $(function () {
   function setBackgroundPosition(){
     $('.typo__wrapper').css('background-position', "0px " + (Math.max(document.body.scrollTop, document.documentElement.scrollTop) / 1.5) + "px");
     $('.typo__quote').css('background-position', "right " + (Math.max(document.body.scrollTop, document.documentElement.scrollTop) / 6) + "px");
+    $('.typo__quote--mpsBasic').css('background-position', "right " + (Math.max(document.body.scrollTop, document.documentElement.scrollTop) / 35) + "px");
   }
 
 
@@ -310,7 +311,7 @@ $(document).ready(function () {
   var vendors = ['ms', 'moz', 'webkit', 'o'];
   for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
       window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-      window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
+      window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
                                   || window[vendors[x]+'CancelRequestAnimationFrame'];
   }
 
@@ -318,7 +319,7 @@ $(document).ready(function () {
       window.requestAnimationFrame = function(callback, element) {
           var currTime = new Date().getTime();
           var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-          var id = window.setTimeout(function() { callback(currTime + timeToCall); }, 
+          var id = window.setTimeout(function() { callback(currTime + timeToCall); },
             timeToCall);
           lastTime = currTime + timeToCall;
           return id;
@@ -335,7 +336,7 @@ $(document).ready(function () {
     var spikesLimit = 5;
 
     (function next() {
-      requestAnimationFrame(function(){ 
+      requestAnimationFrame(function(){
         var input = [];
         for (var i = 0; i < spikes.length; i++) {
           if (indexBuffer.indexOf(i) < 0 && indexBuffer.indexOf(i - 1) < 0 && indexBuffer.indexOf(i + 1) < 0) {
@@ -468,7 +469,7 @@ $(document).ready(function () {
   $('.sw-btn-next').text('Continue');
 
   if ($('#counter').length) {
-    var deadline = 'Jul 25 2019 18:40:18 GMT-0400';
+    var deadline = 'Sep 01 2018 00:00:00 GMT-0400';
 
     function time_remaining(endtime) {
       var t = Date.parse(endtime) - Date.parse(new Date());
