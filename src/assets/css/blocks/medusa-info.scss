@@ -1,7 +1,9 @@
 .medusaInfo {
   margin-bottom: rem(100);
+  padding-top: rem(40);
 
   &__logo {
+    max-width: 250px;
 
     @media (max-width: $md-max-width) {
       padding-bottom: rem(80);

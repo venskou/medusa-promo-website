@@ -9,7 +9,7 @@
 
 
   &__wrapper {
-    padding: rem(11) rem(130) rem(70);
+    padding: rem(25) rem(130) rem(70);
     background-color: $white;
     margin-bottom: rem(50);
     border: 3px solid $purple-light;
@@ -47,6 +47,7 @@
     text-align: center;
     color: $blue;
     margin: rem(80) 0;
+    line-height: 1.8;
     span {
       border-bottom: 5px solid $blue-bg;
     }
@@ -186,6 +187,11 @@
     margin-bottom: rem(30);
     min-height: rem(122);
     position: relative;
+
+    &--white {
+      background: transparent;
+      padding: 0;
+    }
 
     &:hover {
       .typo__countBlock__count {
