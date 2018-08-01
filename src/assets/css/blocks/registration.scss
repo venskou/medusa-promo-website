@@ -1,5 +1,12 @@
 .registration {
   margin-bottom: rem(90);
+  margin-left: rem(-130);
+  margin-right: rem(-130);
+
+  @media(max-width: $md-max-width) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 
   @media(max-width: $sm-max-width) {
         background-color: $purple-pale;
@@ -7,7 +14,6 @@
 
   &__wrapper {
     width: 100%;
-    border-radius: 8px;
     background-color: $purple-light;
     padding-left: rem(91);
     padding-right: rem(91);
@@ -126,6 +132,7 @@
   }
 
   &__stepsItem {
+    margin-bottom: 0;
 
     @media(max-width: $xs-max-width) {
       flex-grow: 1;
@@ -135,6 +142,7 @@
       .registration__stepsLink {
         background-color: $blue;
         color: $white;
+        border-color: $blue;
 
         &:hover {
           color: $white;
@@ -153,6 +161,7 @@
 
         &:hover {
           color: $black;
+          border-color: $white;
         }
 
         &::after {
@@ -172,6 +181,7 @@
     padding-bottom: rem(15);
     padding-right: 42px;
     cursor: pointer;
+    border-color: transparent !important;
 
     @media(max-width: $md-max-width) {
       padding-right: 30px;
@@ -185,6 +195,7 @@
       padding-left: rem(25);
       padding-right: rem(25);
     }
+
 
     &--first {
       padding-left: rem(25);
